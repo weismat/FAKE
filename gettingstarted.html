@@ -85,8 +85,8 @@
 
 <pre lang="batchfile">@echo off
 cls
-&quot;tools\nuget\nuget.exe&quot; &quot;install&quot; &quot;FAKE&quot; &quot;-OutputDirectory&quot; &quot;tools&quot; &quot;-ExcludeVersion&quot;
-&quot;tools\FAKE\tools\Fake.exe&quot; build.fsx
+&quot;.nuget\NuGet.exe&quot; &quot;Install&quot; &quot;FAKE&quot; &quot;-OutputDirectory&quot; &quot;packages&quot; &quot;-ExcludeVersion&quot;
+&quot;packages\FAKE\tools\Fake.exe&quot; build.fsx
 pause</pre>
 
 <p>If you run this batch file from the command line then the latest FAKE version will be <a href="http://nuget.org/packages/FAKE/">downloaded via nuget</a> and your first FAKE script (build.fsx) will be executed. If everything works fine you will get the following output:</p>
@@ -111,8 +111,8 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="c">// include Fake lib</span>
-<span class="prep">#r</span> <span class="s">@&quot;</span><span class="s">tools</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
-<span class="k">open</span> <span class="i">Fake</span> 
+<span class="prep">#r</span> <span class="s">@&quot;</span><span class="s">packages</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+<span class="k">open</span> <span class="i">Fake</span>
 
 <span class="c">// Default target</span>
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Default</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
@@ -162,7 +162,7 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="c">// include Fake lib</span>
-<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">tools</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">packages</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
 <span class="k">open</span> <span class="i">Fake</span>
 
 <span class="c">// Properties</span>
@@ -178,7 +178,7 @@ pause</pre>
 )
 
 <span class="c">// Dependencies</span>
-<span class="s">&quot;</span><span class="s">Clean</span><span class="s">&quot;</span> 
+<span class="s">&quot;</span><span class="s">Clean</span><span class="s">&quot;</span>
   <span class="o">==&gt;</span> <span class="s">&quot;</span><span class="s">Default</span><span class="s">&quot;</span>
 
 <span class="c">// start build</span>
@@ -233,7 +233,7 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="c">// include Fake lib</span>
-<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">tools</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">packages</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
 <span class="k">open</span> <span class="i">Fake</span>
 
 <span class="c">// Properties</span>
@@ -321,7 +321,7 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="c">// include Fake lib</span>
-<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">tools</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">packages</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
 <span class="k">open</span> <span class="i">Fake</span>
 
 <span class="c">// Properties</span>
@@ -380,7 +380,7 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="c">// include Fake lib</span>
-<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">tools</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">packages</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
 <span class="k">open</span> <span class="i">Fake</span>
 
 <span class="i">RestorePackages</span>()
@@ -448,7 +448,7 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="c">// include Fake lib</span>
-<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">tools</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;</span><span class="s">packages</span><span class="s">/</span><span class="s">FAKE</span><span class="s">/</span><span class="s">tools</span><span class="s">/</span><span class="s">FakeLib</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
 <span class="k">open</span> <span class="i">Fake</span>
 
 <span class="i">RestorePackages</span>()
@@ -475,7 +475,7 @@ pause</pre>
 )
 
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Test</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs2', 18)" onmouseover="showTip(event, 'fs2', 18)" class="i">testDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">NUnit</span><span class="s">.</span><span class="s">Test</span><span class="s">.</span><span class="s">*</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>) 
+    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs2', 18)" onmouseover="showTip(event, 'fs2', 18)" class="i">testDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">NUnit</span><span class="s">.</span><span class="s">Test</span><span class="s">.</span><span class="s">*</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>)
       <span class="o">|&gt;</span> <span class="i">NUnit</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span>
           {<span class="i">p</span> <span class="k">with</span>
              <span class="i">DisableShadowCopy</span> <span class="o">=</span> <span class="k">true</span>;
@@ -519,7 +519,7 @@ pause</pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Test</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="i">testDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">NUnit</span><span class="s">.</span><span class="s">Test</span><span class="s">.</span><span class="s">*</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>) 
+    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="i">testDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">NUnit</span><span class="s">.</span><span class="s">Test</span><span class="s">.</span><span class="s">*</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>)
       <span class="o">|&gt;</span> <span class="i">NUnitParallel</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span>
           {<span class="i">p</span> <span class="k">with</span>
              <span class="i">DisableShadowCopy</span> <span class="o">=</span> <span class="k">true</span>;
@@ -628,7 +628,7 @@ pause</pre>
 )
 
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Test</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs2', 31)" onmouseover="showTip(event, 'fs2', 31)" class="i">testDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">NUnit</span><span class="s">.</span><span class="s">Test</span><span class="s">.</span><span class="s">*</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>) 
+    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs2', 31)" onmouseover="showTip(event, 'fs2', 31)" class="i">testDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">NUnit</span><span class="s">.</span><span class="s">Test</span><span class="s">.</span><span class="s">*</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>)
       <span class="o">|&gt;</span> <span class="i">NUnit</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span>
           {<span class="i">p</span> <span class="k">with</span>
              <span class="i">DisableShadowCopy</span> <span class="o">=</span> <span class="k">true</span>;
@@ -636,7 +636,7 @@ pause</pre>
 )
 
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Zip</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs1', 33)" onmouseover="showTip(event, 'fs1', 33)" class="i">buildDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">*</span><span class="s">*</span><span class="s">/</span><span class="s">*</span><span class="s">.</span><span class="s">*</span><span class="s">&quot;</span>) 
+    <span class="o">!!</span> (<span onmouseout="hideTip(event, 'fs1', 33)" onmouseover="showTip(event, 'fs1', 33)" class="i">buildDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">/</span><span class="s">*</span><span class="s">*</span><span class="s">/</span><span class="s">*</span><span class="s">.</span><span class="s">*</span><span class="s">&quot;</span>)
         <span class="o">--</span> <span class="s">&quot;</span><span class="s">*</span><span class="s">.</span><span class="s">zip</span><span class="s">&quot;</span>
         <span class="o">|&gt;</span> <span class="i">Zip</span> <span onmouseout="hideTip(event, 'fs1', 34)" onmouseover="showTip(event, 'fs1', 34)" class="i">buildDir</span> (<span onmouseout="hideTip(event, 'fs3', 35)" onmouseover="showTip(event, 'fs3', 35)" class="i">deployDir</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">Calculator</span><span class="s">.</span><span class="s">&quot;</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs4', 36)" onmouseover="showTip(event, 'fs4', 36)" class="i">version</span> <span class="o">+</span> <span class="s">&quot;</span><span class="s">.</span><span class="s">zip</span><span class="s">&quot;</span>)
 )
