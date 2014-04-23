@@ -46,7 +46,7 @@ In this tutorial we are looking at <a href="http://lefthandedgoat.github.io/cano
 
 <h2>Setup your canopy project</h2>
 
-<p>Consider a simple program.fs file:</p>
+<p>Consider a simple canopy program.fs file:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -73,7 +73,6 @@ In this tutorial we are looking at <a href="http://lefthandedgoat.github.io/cano
 <span class="l">22: </span>
 <span class="l">23: </span>
 <span class="l">24: </span>
-<span class="l">25: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
@@ -94,8 +93,7 @@ In this tutorial we are looking at <a href="http://lefthandedgoat.github.io/cano
     <span class="c">//go to url</span>
     <span class="i">url</span> <span class="s">&quot;</span><span class="s">http</span><span class="s">:</span><span class="s">/</span><span class="s">/</span><span class="s">localhost</span><span class="s">:</span><span class="s">81</span><span class="s">/</span><span class="s">canopy</span><span class="s">/</span><span class="s">testpages</span><span class="s">/</span><span class="s">&quot;</span>
 
-    <span class="c">//assert that the element with an id of &#39;welcome&#39; has</span>
-    <span class="c">//the text &#39;Welcome&#39;</span>
+    <span class="c">//assert that the element with an id of &#39;welcome&#39; has the text &#39;Welcome&#39;</span>
     <span class="s">&quot;</span><span class="s">#</span><span class="s">welcome</span><span class="s">&quot;</span> <span class="o">==</span> <span class="s">&quot;</span><span class="s">Welcome</span><span class="s">&quot;</span>
 
 <span class="c">//run all tests</span>
@@ -142,12 +140,10 @@ In this tutorial we are looking at <a href="http://lefthandedgoat.github.io/cano
 <span class="l">15: </span>
 <span class="l">16: </span>
 <span class="l">17: </span>
-<span class="l">18: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">CanopyTests</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-
     <span class="k">let</span> <span class="i">hostName</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">localhost</span><span class="s">&quot;</span>
     <span class="k">let</span> <span class="i">port</span> <span class="o">=</span> <span class="n">81</span>
 
