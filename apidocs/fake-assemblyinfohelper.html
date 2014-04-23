@@ -82,10 +82,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
             AssemblyInfo setParams
           </code>
-          <div class="tip" id="15">
+          <div class="tip" id="22">
             <strong>Signature:</strong>setParams:(AssemblyInfoParams -&gt; AssemblyInfoParams) -&gt; unit<br />
                       </div>
         </td>
@@ -99,10 +99,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
             AssemblyInfoDefaults 
           </code>
-          <div class="tip" id="17">
+          <div class="tip" id="28">
             <strong>Signature:</strong>AssemblyInfoParams<br />
                       </div>
         </td>
@@ -115,10 +115,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
             AssemblyInfoReplacementDefaults 
           </code>
-          <div class="tip" id="18">
+          <div class="tip" id="29">
             <strong>Signature:</strong>AssemblyInfoReplacementParams<br />
                       </div>
         </td>
@@ -131,10 +131,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
             BulkReplaceAssemblyInfoVersions (...)
           </code>
-          <div class="tip" id="19">
+          <div class="tip" id="30">
             <strong>Signature:</strong>dir:string -&gt; replacementParameters:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
                       </div>
         </td>
@@ -144,26 +144,28 @@
 <h2>Parameters</h2>
 
 <ul>
-<li>'dir' - The directory (subdirectories will be included), which inhabits the AssemblyInfo files</li>
-<li>'replacementParameters' - The replacement parameters for the AssemblyInfo files</li>
+<li>'dir' - The directory (subdirectories will be included), which inhabits the AssemblyInfo files.</li>
+<li>'replacementParameters' - The replacement parameters for the AssemblyInfo files.</li>
 </ul>
 
 <h2>Sample</h2>
 
-<p>BulkReplaceAssemblyInfoVersions "test/" (fun f -> {f with
-                                                    AssemblyVersion = "1.1.1.1"
-                                                    AssemblyInformationalVersion = "1.1.1.1"})</p>
+<pre><code>   BulkReplaceAssemblyInfoVersions "test/" (fun f -&gt; 
+                                              {f with
+                                                  AssemblyVersion = "1.1.1.1"
+                                                  AssemblyInformationalVersion = "1.1.1.1"})
+</code></pre>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/AssemblyInfoHelper.fs#L250-250" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/AssemblyInfoHelper.fs#L251-251" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
             generateFile (...)
           </code>
-          <div class="tip" id="20">
+          <div class="tip" id="31">
             <strong>Signature:</strong>param:AssemblyInfoParams -&gt; attributes:Dictionary&lt;string,string&gt; -&gt; imports:seq&lt;string&gt; -&gt; writer:TextWriter -&gt; unit<br />
                       </div>
         </td>
@@ -176,10 +178,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
             ReplaceAssemblyInfoVersions param
           </code>
-          <div class="tip" id="21">
+          <div class="tip" id="32">
             <strong>Signature:</strong>param:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
                       </div>
         </td>
