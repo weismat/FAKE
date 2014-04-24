@@ -202,33 +202,6 @@ If you need more than the default functionality you can either write F# or simpl
 </tr>
 </table>
 
-<h3>Final targets</h3>
-
-<p>Final target can be used for TearDown functionality. 
-These targets will be executed even if the build fails but have to be activated via ActivateFinalTarget().</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-<span class="l">7: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="c">// FinalTarget will be excuted even if build fails</span>
-<span class="i">FinalTarget</span> <span class="s">&quot;</span><span class="s">CloseSomePrograms</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-    <span class="c">// close stuff and release resources</span>
-)
-
-<span class="c">// Activate FinalTarget somewhere during build</span>
-<span class="i">ActivateFinalTarget</span> <span class="s">&quot;</span><span class="s">CloseSomePrograms</span><span class="s">&quot;</span></pre>
-</td>
-</tr>
-</table>
-
 <h2>FileSets</h2>
 
 <p>"FAKE - F# Make" uses similar include and exclude patterns as NAnt and MSBuild.</p>
