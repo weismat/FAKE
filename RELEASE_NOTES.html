@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- 
+      The RELEASE_NOTES parameters will be replaced with the 
+      document title extracted from the <h1> element or
+      file name, if there is no <h1> heading
+    -->
+    <title>RELEASE_NOTES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAKE - F# Make">
+    <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="content/style.css" />
+    <script src="content/tips.js" type="text/javascript"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="https://github.com/fsharp/FAKE">github page</a></li>
+        </ul>
+        <h3 class="muted">FAKE - F# Make</h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          <h4>2.15.7 - 21.05.2014</h4>
+
+<ul>
+<li>Remove AutoOpen from TaskRunnerHelper</li>
+</ul>
+
+<h4>2.15.6 - 14.05.2014</h4>
+
+<ul>
+<li>Allow to retrieve version no. from assemblies</li>
+</ul>
+
+<h4>2.15.5 - 08.05.2014</h4>
+
+<ul>
+<li>Fix issue with symbol packages in NugetHelper</li>
+</ul>
+
+<h4>2.15.4 - 24.4.2014</h4>
+
+<ul>
+<li>Fix issues in the ProcessHelper - <a href="https://github.com/fsharp/FAKE/pull/412">https://github.com/fsharp/FAKE/pull/412</a> and https://github.com/fsharp/FAKE/pull/411</li>
+</ul>
+
+<h4>2.15.2 - 24.4.2014</h4>
+
+<ul>
+<li>Allow to register BuildFailureTargets - https://github.com/fsharp/FAKE/issues/407</li>
+<li>UnionConverter no longer needed for Json.Net</li>
+</ul>
+
+<h4>2.14.13 - 24.04.2014</h4>
+
+<ul>
+<li>Handle problems with ProgramFilesX86 on mono - https://github.com/tpetricek/FsLab/pull/32</li>
+</ul>
+
+<h4>2.14.12 - 24.04.2014</h4>
+
+<ul>
+<li>Change the MSBuild 12.0 path settings according to https://github.com/tpetricek/FsLab/pull/32</li>
+</ul>
+
+<h4>2.14.1 - 23.04.2014</h4>
+
+<ul>
+<li>Silent mode for MSIHelper - https://github.com/fsharp/FAKE/issues/400</li>
+</ul>
+
+<h4>2.14.0 - 22.04.2014</h4>
+
+<ul>
+<li>Support for OpenCover - https://github.com/fsharp/FAKE/pull/398</li>
+<li>Support for ReportsGenerator - https://github.com/fsharp/FAKE/pull/399</li>
+</ul>
+
+<h4>2.13.4 - 14.04.2014</h4>
+
+<ul>
+<li>Adding AppVeyor environment variables</li>
+<li>New BulkReplaceAssemblyInfoVersions task - https://github.com/fsharp/FAKE/pull/394</li>
+<li>Fixed default nuspec file</li>
+<li>"Getting started" tutorial uses better folder structure</li>
+</ul>
+
+<h4>2.13.3 - 09.04.2014</h4>
+
+<ul>
+<li>Allows explicit file specification on the NuGetParams Type</li>
+</ul>
+
+<h4>2.13.2 - 07.04.2014</h4>
+
+<ul>
+<li>Fix TypeScript output dir</li>
+<li>Add better docs for the TypeScript compiler.</li>
+</ul>
+
+<h4>2.13.1 - 05.04.2014</h4>
+
+<ul>
+<li>Don't call the TypeScript compiler more than once</li>
+<li>New parameters for TypeScript</li>
+</ul>
+
+<h4>2.13.0 - 04.04.2014</h4>
+
+<ul>
+<li>Enumerate the files lazily in the File|Directory active pattern</li>
+<li>Using Nuget 2.8.1</li>
+</ul>
+
+<h4>2.13.0-alpha2 - 03.04.2014</h4>
+
+<ul>
+<li>Added TypeScript 1.0 support</li>
+</ul>
+
+<h4>2.13.0-alpha1 - 02.04.2014</h4>
+
+<ul>
+<li>Added TypeScript support</li>
+</ul>
+
+<h4>2.12.2 - 31.03.2014</h4>
+
+<ul>
+<li>Fixed ProcessTestRunner</li>
+</ul>
+
+<h4>2.12.1-alpha3 - 31.03.2014</h4>
+
+<ul>
+<li>Fixed mono build on Travis</li>
+</ul>
+
+<h4>2.12.0 - 31.03.2014</h4>
+
+<ul>
+<li>Add getDependencies to NugetHelper</li>
+<li>SourceLink support</li>
+<li>NancyFx instead of ASP.NET MVC for Fake.Deploy</li>
+<li>Allows to execute processes as unit tests.</li>
+<li>Adding SourceLinks</li>
+<li>Move release management back to the local machine (using this document)</li>
+<li>Allow to run MsTest test in isolation</li>
+<li>Fixed Nuget.packSymbols</li>
+<li>Fixed bug in SemVer parser</li>
+<li>New title property in Nuspec parameters</li>
+<li>Added option to disabled FAKE's automatic process killing</li>
+<li>Better AppyVeyor integration</li>
+<li>Added ability to define custom MSBuild loggers</li>
+<li>Fix for getting the branch name with Git >= 1.9</li>
+<li>Added functions to write and delete from registry</li>
+<li>NUnit NoThread, Domain and StopOnError parameters</li>
+<li>Add support for VS2013 MSTest</li>
+<li>Lots of small fixes</li>
+</ul>
+
+                    
+        </div>
+        <div class="span3">
+          <img src="pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
+          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+            <li class="nav-header">FAKE - F# Make</li>
+              <li><a href="index.html">Home page</a></li>
+              <li class="divider"></li>              
+            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+              <li><a href="https://github.com/fsharp/FAKE">Source Code on GitHub</a></li>              
+              <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
+              <li><a href="users.html">Who is using FAKE?</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+              <li><a href="contributing.html">Contributing to FAKE</a></li>
+              <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
+            <li class="nav-header">Articles</li>
+              <li><a href="gettingstarted.html">Getting started</a></li>
+              <li class="divider"></li>
+              <li><a href="nuget.html">NuGet package restore</a></li>
+              <li><a href="fxcop.html">Using FxCop in a build</a></li>
+              <li><a href="assemblyinfo.html">Generating AssemblyInfo</a></li>
+              <li><a href="create-nuget-package.html">Create NuGet packages</a></li>
+              <li><a href="specifictargets.html">Running specific targets</a></li>
+              <li><a href="commandline.html">Running FAKE from command line</a></li>
+              <li><a href="customtasks.html">Creating custom tasks</a></li>
+              <li><a href="teamcity.html">TeamCity integration</a></li>
+              <li><a href="canopy.html">Running canopy tests</a></li>
+              <li><a href="octopusdeploy.html">Octopus Deploy</a></li>
+              <li><a href="typescript.html">TypeScript support</a></li>
+              <li class="divider"></li>
+              <li><a href="deploy.html">Fake.Deploy</a></li>
+              <li class="nav-header">Documentation</li>
+              <li><a href="apidocs/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/fsharp/FAKE"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+  </body>
+</html>
