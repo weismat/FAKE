@@ -91,10 +91,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '290', 290)" onmouseover="showTip(event, '290', 290)">
+          <code onmouseout="hideTip(event, '289', 289)" onmouseover="showTip(event, '289', 289)">
             asyncShellExec args
           </code>
-          <div class="tip" id="290">
+          <div class="tip" id="289">
             <strong>Signature:</strong>args:ExecParams -&gt; Async&lt;int&gt;<br />
                       </div>
         </td>
@@ -104,48 +104,48 @@ logging output and error messages to FAKE output. You can compose the result
 with Async.Parallel to run multiple external programs at once, but be
 sure that none of them depend on the output of another.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L372-372" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '292', 292)" onmouseover="showTip(event, '292', 292)">
-            defaultParams 
-          </code>
-          <div class="tip" id="292">
-            <strong>Signature:</strong>ExecParams<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Default parameters for process execution.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L354-354" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '293', 293)" onmouseover="showTip(event, '293', 293)">
-            directExec configProcessStartInfoF
-          </code>
-          <div class="tip" id="293">
-            <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Runs the given process, waits for its completion and returns if it succeeded.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L200-200" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L372-372" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '294', 294)" onmouseover="showTip(event, '294', 294)">
-            ensureProcessesHaveStopped name timeout
+            defaultParams 
           </code>
           <div class="tip" id="294">
+            <strong>Signature:</strong>ExecParams<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Default parameters for process execution.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L354-354" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '295', 295)" onmouseover="showTip(event, '295', 295)">
+            directExec configProcessStartInfoF
+          </code>
+          <div class="tip" id="295">
+            <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Runs the given process, waits for its completion and returns if it succeeded.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L200-200" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '296', 296)" onmouseover="showTip(event, '296', 296)">
+            ensureProcessesHaveStopped name timeout
+          </code>
+          <div class="tip" id="296">
             <strong>Signature:</strong>name:string -&gt; timeout:TimeSpan -&gt; unit<br />
                       </div>
         </td>
@@ -159,16 +159,16 @@ sure that none of them depend on the output of another.</p>
 <li><code>timeout</code> - The timespan to time out after.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L455-455" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L455-455" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '295', 295)" onmouseover="showTip(event, '295', 295)">
+          <code onmouseout="hideTip(event, '297', 297)" onmouseover="showTip(event, '297', 297)">
             ExecProcess (...)
           </code>
-          <div class="tip" id="295">
+          <div class="tip" id="297">
             <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; timeOut:TimeSpan -&gt; int<br />
                       </div>
         </td>
@@ -188,16 +188,16 @@ sure that none of them depend on the output of another.</p>
 <p>if result <> 0 then failwithf "MyProc.exe returned with a non-zero exit code"</p></li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L162-162" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L162-162" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '296', 296)" onmouseover="showTip(event, '296', 296)">
+          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
             ExecProcessAndReturnMessages (...)
           </code>
-          <div class="tip" id="296">
+          <div class="tip" id="298">
             <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; timeOut:TimeSpan -&gt; ProcessResult<br />
                       </div>
         </td>
@@ -211,16 +211,16 @@ sure that none of them depend on the output of another.</p>
 <li><code>timeOut</code> - The timeout for the process.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L92-92" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L92-92" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '297', 297)" onmouseover="showTip(event, '297', 297)">
+          <code onmouseout="hideTip(event, '299', 299)" onmouseover="showTip(event, '299', 299)">
             ExecProcessElevated cmd args timeOut
           </code>
-          <div class="tip" id="297">
+          <div class="tip" id="299">
             <strong>Signature:</strong>cmd:string -&gt; args:string -&gt; timeOut:TimeSpan -&gt; int<br />
                       </div>
         </td>
@@ -235,16 +235,16 @@ sure that none of them depend on the output of another.</p>
 <li><code>timeOut</code> - The timeout for the process.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L171-171" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L171-171" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
+          <code onmouseout="hideTip(event, '300', 300)" onmouseover="showTip(event, '300', 300)">
             ExecProcessRedirected (...)
           </code>
-          <div class="tip" id="298">
+          <div class="tip" id="300">
             <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; timeOut:TimeSpan -&gt; bool * seq&lt;ConsoleMessage&gt;<br />
                       </div>
         </td>
@@ -258,16 +258,16 @@ sure that none of them depend on the output of another.</p>
 <li><code>timeOut</code> - The timeout for the process.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L103-103" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L103-103" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '299', 299)" onmouseover="showTip(event, '299', 299)">
+          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
             ExecProcessWithLambdas (...)
           </code>
-          <div class="tip" id="299">
+          <div class="tip" id="301">
             <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; timeOut:TimeSpan -&gt; silent:bool -&gt; errorF:(string -&gt; unit) -&gt; messageF:(string -&gt; unit) -&gt; int<br />
                       </div>
         </td>
@@ -284,199 +284,199 @@ sure that none of them depend on the output of another.</p>
 <li><code>messageF</code> - A function which will be called with the message log.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L51-51" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '300', 300)" onmouseover="showTip(event, '300', 300)">
-            fireAndForget configProcessStartInfoF
-          </code>
-          <div class="tip" id="300">
-            <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Starts the given process and returns immediatly.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L191-191" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
-            getProcessesByName name
-          </code>
-          <div class="tip" id="301">
-            <strong>Signature:</strong>name:string -&gt; seq&lt;Process&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Returns all processes with the given name</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L406-406" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L51-51" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '302', 302)" onmouseover="showTip(event, '302', 302)">
-            kill proc
+            fireAndForget configProcessStartInfoF
           </code>
           <div class="tip" id="302">
-            <strong>Signature:</strong>proc:Process -&gt; unit<br />
+            <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Kills the given process</p>
+        <p>Starts the given process and returns immediatly.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L396-396" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L191-191" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '303', 303)" onmouseover="showTip(event, '303', 303)">
-            killAllCreatedProcesses ()
+            getProcessesByName name
           </code>
           <div class="tip" id="303">
-            <strong>Signature:</strong>unit -&gt; unit<br />
+            <strong>Signature:</strong>name:string -&gt; seq&lt;Process&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Kills all processes that are created by the FAKE build script unless "donotkill" flag was set.</p>
+        <p>Returns all processes with the given name</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L432-432" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L406-406" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '304', 304)" onmouseover="showTip(event, '304', 304)">
-            killFSI ()
+            kill proc
           </code>
           <div class="tip" id="304">
-            <strong>Signature:</strong>unit -&gt; unit<br />
+            <strong>Signature:</strong>proc:Process -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Kills the F# Interactive (FSI) process.</p>
+        <p>Kills the given process</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L423-423" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L396-396" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '305', 305)" onmouseover="showTip(event, '305', 305)">
-            killMSBuild ()
+            killAllCreatedProcesses ()
           </code>
           <div class="tip" id="305">
             <strong>Signature:</strong>unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Kills the MSBuild process.</p>
+        <p>Kills all processes that are created by the FAKE build script unless "donotkill" flag was set.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L426-426" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L432-432" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '306', 306)" onmouseover="showTip(event, '306', 306)">
-            killProcess name
+            killFSI ()
           </code>
           <div class="tip" id="306">
-            <strong>Signature:</strong>name:string -&gt; unit<br />
+            <strong>Signature:</strong>unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Kills all processes with the given name</p>
+        <p>Kills the F# Interactive (FSI) process.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L418-418" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L423-423" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '307', 307)" onmouseover="showTip(event, '307', 307)">
-            killProcessById id
+            killMSBuild ()
           </code>
           <div class="tip" id="307">
-            <strong>Signature:</strong>id:int -&gt; unit<br />
+            <strong>Signature:</strong>unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Kills all processes with the given id</p>
+        <p>Kills the MSBuild process.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L403-403" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L426-426" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '308', 308)" onmouseover="showTip(event, '308', 308)">
-            RunService command serviceName
+            killProcess name
           </code>
           <div class="tip" id="308">
-            <strong>Signature:</strong>command:string -&gt; serviceName:string -&gt; unit<br />
+            <strong>Signature:</strong>name:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Sends a command to a windows service.</p>
+        <p>Kills all processes with the given name</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L218-218" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L418-418" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '309', 309)" onmouseover="showTip(event, '309', 309)">
-            StartProcess configProcessStartInfoF
+            killProcessById id
           </code>
           <div class="tip" id="309">
-            <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; unit<br />
+            <strong>Signature:</strong>id:int -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Starts the given process and forgets about it.</p>
+        <p>Kills all processes with the given id</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L211-211" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L403-403" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '310', 310)" onmouseover="showTip(event, '310', 310)">
-            StartService serviceName
+            RunService command serviceName
           </code>
           <div class="tip" id="310">
-            <strong>Signature:</strong>serviceName:string -&gt; unit<br />
+            <strong>Signature:</strong>command:string -&gt; serviceName:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Starts a windows service</p>
+        <p>Sends a command to a windows service.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L233-233" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L218-218" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '311', 311)" onmouseover="showTip(event, '311', 311)">
-            StopService serviceName
+            StartProcess configProcessStartInfoF
           </code>
           <div class="tip" id="311">
+            <strong>Signature:</strong>configProcessStartInfoF:(ProcessStartInfo -&gt; unit) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Starts the given process and forgets about it.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L211-211" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '312', 312)" onmouseover="showTip(event, '312', 312)">
+            StartService serviceName
+          </code>
+          <div class="tip" id="312">
+            <strong>Signature:</strong>serviceName:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Starts a windows service</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L233-233" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '313', 313)" onmouseover="showTip(event, '313', 313)">
+            StopService serviceName
+          </code>
+          <div class="tip" id="313">
             <strong>Signature:</strong>serviceName:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Stops a windows service</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/develop/src/app/FakeLib/ProcessHelper.fs#L228-228" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ProcessHelper.fs#L228-228" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
