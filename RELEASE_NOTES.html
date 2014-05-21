@@ -175,6 +175,172 @@
 <li>Lots of small fixes</li>
 </ul>
 
+<h4>2.2</h4>
+
+<ul>
+<li>Created new packages on nuget:
+<ul>
+<li>Fake.Deploy - allows to use FAKE scripts in deployment.</li>
+<li>Fake.Experimental - new stuff where we aren't sure if we want to support it.</li>
+<li>Fake.Gallio - contains the Gallio runner support.</li>
+<li>Fake.SQL - Contains tasks for SQL Server.</li>
+<li>Fake.Core - All the basic features and FAKE.exe.</li>
+</ul></li>
+<li>Created documentation and tutorials - see http://fsharp.github.io/FAKE/</li>
+<li>New tasks:
+<ul>
+<li>Added ReleaseNotes parser</li>
+<li>Added Dynamics NAV helper</li>
+<li>Added support for MSTest and fixie</li>
+<li>Parallel NUnit task</li>
+<li>New AssemblyInfoFile task</li>
+<li>Support for Octopus Deploy</li>
+<li>Support for MAGE</li>
+<li>Suppport for Xamarin's xpkg</li>
+<li>Many other new tasks</li>
+</ul></li>
+<li>Fake.Boot</li>
+<li>New Globbing system</li>
+<li>Tons of bug fixes</li>
+<li>Bundles F# 3.0 compiler and FSI.</li>
+</ul>
+
+<h4>1.72.0.0</h4>
+
+<ul>
+<li>"RestorePackages" allows to restore nuget packages</li>
+</ul>
+
+<h4>1.70.0.0</h4>
+
+<ul>
+<li>FAKE nuget package comes bundles with a fsi.exe</li>
+<li>Self build downloads latest FAKE master via nuget</li>
+</ul>
+
+<h4>1.66.1.0</h4>
+
+<ul>
+<li>Fixed bug where FAKE.Deploy didn't run the deploy scripts where used as a windows service</li>
+<li>It's possible to add file loggers for MSBuild</li>
+<li>Fixed path resolution for fsi on *nix</li>
+<li>BREAKING CHANGE: Removed version normalization from NuGet package creation</li>
+<li>Fixes for NUNit compatibility on mono</li>
+<li>Fixes in ProcessHelper for mono compatibility</li>
+<li>Fixes in the mono build</li>
+<li>Improved error reporting in Fake.exe</li>
+<li>Added a SpecFlow helper</li>
+<li>Fixed some issues in file helper routines when working with no existing directory chain</li>
+</ul>
+
+<h4>1.64.1.0</h4>
+
+<ul>
+<li>Fixed bug where FAKE didn't run the correct build script</li>
+</ul>
+
+<h4>1.64.0.0</h4>
+
+<ul>
+<li>New conditional dependency operator =?></li>
+<li>BREAKING CHANGE: Some AssemblyInfo task parameters are now option types. See type hints.</li>
+</ul>
+
+<h4>1.62.0.0</h4>
+
+<ul>
+<li>New RegAsm task, allows to create TLBs from a dll.</li>
+<li>New MSI task, allows to install or uninstall msi files.</li>
+<li>StringHelper.NormalizeVersion fixed for WiX.</li>
+</ul>
+
+<h4>1.58.9.0</h4>
+
+<ul>
+<li>Allow to choose specific nunit-console runner.</li>
+</ul>
+
+<h4>1.58.6.0</h4>
+
+<ul>
+<li>Using nuget packages for mspec.</li>
+<li>FAKE tries to kill all MSBuild and FSI processes at the end of a build.</li>
+</ul>
+
+<h4>1.58.1.0</h4>
+
+<ul>
+<li>Removed message system for build output. Back to simpler tracing.</li>
+</ul>
+
+<h4>1.58.0.0</h4>
+
+<ul>
+<li>ReplaceAssemblyInfoVersions task allows to replace version info in AssemblyVersion-files</li>
+<li>New task ConvertFileToWindowsLineBreaks</li>
+</ul>
+
+<h4>1.56.10.0</h4>
+
+<ul>
+<li>Allows to build .sln files</li>
+</ul>
+
+<h4>1.56.0.0</h4>
+
+<ul>
+<li>Allows to publish symbols via nuget.exe</li>
+<li>Autotrim trailing .0 from version in order to fullfill nuget standards.</li>
+</ul>
+
+<h4>1.54.0.0</h4>
+
+<ul>
+<li>If the publishment of a Nuget package fails, then FAKE will try it again.</li>
+<li>Added Changelog.markdown to FAKE deployment</li>
+<li>Added RequireExactly helper function in order to require a specific nuget dependency.</li>
+<li>NugetHelper.GetPackageVersion - Gets the version no. for a given package in the packages folder.</li>
+<li>EnvironmentHelper.getTargetPlatformDir - Gets the directory for the given target platform.</li>
+</ul>
+
+<h4>1.52.0.0</h4>
+
+<ul>
+<li>Some smaller bugfixes</li>
+<li>New dependency syntax with ==> and <=></li>
+<li>Tracing of StackTrace only if TargetHelper.PrintStackTraceOnError was set to true</li>
+</ul>
+
+<h4>1.50.0.0</h4>
+
+<ul>
+<li>New task DeleteDirs allows to delete multiple directories.</li>
+<li>New parameter for NuGet dependencies.</li>
+</ul>
+
+<h4>1.48.0.0</h4>
+
+<ul>
+<li>Bundled with docu.exe compiled against .Net 4.0.</li>
+<li>Fixed docu calls to run with full filenames.</li>
+<li>Added targetplatform, target and log switches for ILMerge task.</li>
+<li>Added Git.Information.getLastTag() which gets the last git tag by calling git describe.</li>
+<li>Added Git.Information.getCurrentHash() which gets the last current sha1.</li>
+</ul>
+
+<h4>1.46.0.0</h4>
+
+<ul>
+<li>Fixed Nuget support and allows automatic push.</li>
+</ul>
+
+<h4>1.44.0.0</h4>
+
+<ul>
+<li>Tracing of all external process starts.</li>
+<li>MSpec support.</li>
+</ul>
+
                     
         </div>
         <div class="span3">
