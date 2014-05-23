@@ -70,33 +70,113 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
-            FinishTestCase testCaseName duration
+          <code onmouseout="hideTip(event, '37', 37)" onmouseover="showTip(event, '37', 37)">
+            FinishTestCase (...)
           </code>
-          <div class="tip" id="32">
-            <strong>Signature:</strong>testCaseName:string -&gt; duration:TimeSpan -&gt; unit<br />
+          <div class="tip" id="37">
+            <strong>Signature:</strong>testSuiteName:string -&gt; testCaseName:string -&gt; duration:TimeSpan -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Finishes the test case.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L89-89" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L106-106" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
-            StartTestCase testCaseName
+          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
+            FinishTestSuite testSuiteName
           </code>
-          <div class="tip" id="34">
-            <strong>Signature:</strong>testCaseName:string -&gt; unit<br />
+          <div class="tip" id="41">
+            <strong>Signature:</strong>testSuiteName:&#39;?8328 -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?8328          </div>
+        </td>
+        <td class="xmldoc">
+        <p>Finishes the test suite.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L85-85" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
+            IgnoreTestCase (...)
+          </code>
+          <div class="tip" id="42">
+            <strong>Signature:</strong>testSuiteName:string -&gt; testCaseName:string -&gt; message:&#39;?8334 -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?8334          </div>
+        </td>
+        <td class="xmldoc">
+        <p>Ignores the test case.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L100-100" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+            StartTestCase testSuiteName testCaseName
+          </code>
+          <div class="tip" id="43">
+            <strong>Signature:</strong>testSuiteName:string -&gt; testCaseName:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Starts the test case.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L85-85" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L91-91" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
+            StartTestSuite testSuiteName
+          </code>
+          <div class="tip" id="44">
+            <strong>Signature:</strong>testSuiteName:&#39;?8330 -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?8330          </div>
+        </td>
+        <td class="xmldoc">
+        <p>Starts the test suite.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L88-88" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '45', 45)" onmouseover="showTip(event, '45', 45)">
+            TestFailed (...)
+          </code>
+          <div class="tip" id="45">
+            <strong>Signature:</strong>testSuiteName:string -&gt; testCaseName:string -&gt; message:string -&gt; details:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Reports a failed test.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L95-95" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '46', 46)" onmouseover="showTip(event, '46', 46)">
+            TestSucceeded testSuiteName testCaseName
+          </code>
+          <div class="tip" id="46">
+            <strong>Signature:</strong>testSuiteName:string -&gt; testCaseName:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Reports a succeeded test.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AppVeyor.fs#L103-103" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
