@@ -91,7 +91,7 @@ and changing</p>
 
 <p>to the desired value. If you use the asterisk as port no. then Fake.Deploy will assign the first open port behind of 8080.</p>
 
-<p>To ensure the service is running you can navigate to <a href="http://{computer}:{port}/fake/">http://{computer}:{port}/fake/</a> and you should be presented with a page giving the 
+<p>To ensure the service is running you can navigate to <a href="http://{computer}:{port}/fake/">http://{computer}:{port}/fake/</a> and you should be presented with a page giving the
 status if the service</p>
 
 <h2>Uninstalling Fake deployment services</h2>
@@ -148,14 +148,14 @@ status if the service</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">Fake</span><span class="o">.</span><span class="i">Deploy</span> <span class="o">/</span><span class="i">deployRemote</span> <span class="i">http</span><span class="o">:</span><span class="c">//integration-1:8080 C:\Appdev\MyDeployment.nupkg </span></pre>
+<span class="i">Fake</span><span class="o">.</span><span class="i">Deploy</span> <span class="o">/</span><span class="i">deployRemote</span> <span class="i">http</span><span class="o">:</span><span class="c">//integration-1:8080 C:\Appdev\MyDeployment.nupkg</span></pre>
 </td>
 </tr>
 </table>
 
 <p>It's also possible to just make a HTTP-POST with the package to http://integration-1:8080/fake</p>
 
-<p>This will push the directory to the given url. It is worth noting that the port may well be different, as this depends on the configuration of the 
+<p>This will push the directory to the given url. It is worth noting that the port may well be different, as this depends on the configuration of the
 listening agent (see. Installing Fake deployment service)</p>
 
 <h2>Getting information about the deployments</h2>
@@ -203,6 +203,66 @@ listening agent (see. Installing Fake deployment service)</p>
 </td>
 </tr>
 </table>
+
+<h2>Security</h2>
+
+<p>To turn on authentication in Fake.Deploy set the configuration value for 'Authorization' to 'On' (default is 'Off') in fake.deploy.config.
+When you set this value to 'On' you must also set the configuration key 'AuthorizedKeysFile' to point to a file that that contains the mapping between keys and usernames.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="o">&lt;</span><span class="i">add</span> <span class="i">key</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Authorization</span><span class="s">&quot;</span> <span class="i">value</span><span class="o">=</span><span class="s">&quot;</span><span class="s">On</span><span class="s">&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="i">add</span> <span class="i">key</span><span class="o">=</span><span class="s">&quot;</span><span class="s">AuthorizedKeysFile</span><span class="s">&quot;</span> <span class="i">value</span><span class="o">=</span><span class="s">&quot;</span><span class="s">c</span><span class="s">:</span><span class="s">\f</span><span class="s">ake_deploy</span><span class="s">\a</span><span class="s">uthorized_keys</span><span class="s">&quot;</span> <span class="o">/&gt;</span></pre>
+</td>
+</tr>
+</table>
+
+<p>If you deploy from a fake buildscript you need to make a call to <code>FakeDeployAgentHelper.authenticate</code> before you perfrom any other call to the agent.
+<code>authenticate</code> takes 4 parameters, <code>server</code>, <code>userId</code>, <code>pathToPrivateKey</code> and the <code>password</code> for the private key</p>
+
+<h1>AuthorizedKeysFile</h1>
+
+<p>Is a rsa-pub key file where each line represents one user.
+    ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAvjdQgaEHv11/yHvSDccRM0yW7Im/fJCXyxIa/K/iNJL1erCDO5s0uQVax0vX91hSIAjoZj0jiAkZQgcud/4HTBjqJ7jojJBuC3T2li1rNzxiCclvmujGNIkE/7hOtNyfcIyb4KxCBkL2pQePwOC6Cv2xaE6XnO1D55qC4Y3ABSAPnLEayx5ajOesEldf+E/GJC+shgRtPFzSLcoRqwc3crEu/sE51+Q6tJMJkFbkto71RSzY61NQLeBXKAJCuPej9CZj3YBX5BuM3MrLNAskj8uVzb529uulTdAv4K/WxVu0aFleSCycDQYmJ3bD1eya//lE91p+8JLFCaF3tLc8Aw== Test@Fake.org</p>
+
+<p>Each row has 3 values separated by space
+    <em> which type of key it is, it must be 'ssh-rsa'
+    </em> public key in base64 format (is it?)
+    * username the key maps to.</p>
+
+<h1>How to authorize against Fake.Deploy</h1>
+
+<p>First you must perform a HTTP-GET to:
+        fake/login/yourUserId</p>
+
+<p>From the response from this request, you take the body and base64 decode it, then you sign that value with your private key.
+Then you submit a HTTP-POST to
+        /fake/login.
+There are 2 values you need to supply in the HTTP-POST.
+1) <code>challenge</code> which should have the same base64 encoded value you received in the body of get fake/login/userId.
+2) <code>signature</code> which should contain the signature you created using the <code>challenge</code> value and your private key.</p>
+
+<p>The body of the response from the HTTP-POST contains a guid, this guid should be passed in the header with the name <code>AuthToken</code>.
+To logout make a HTTP-GET to:
+        fake/logout</p>
+
+<h1>How do I generate a key on Windows?</h1>
+
+<p>Get <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTYgen</a>.
+Run it.
+Make sure the key is 'SSH-2 RSA' and number of bits is (at least) 2048
+Click <code>Generate</code> and follow the instructions to genereate the key.
+When the key is generated, change <code>Key comment</code> to be your username and set a passphrase.
+Then save the public key, you need to put this into Fake.Deploy's authorized keys file.
+To save the private key, click <code>Conversions</code> menu option and then click <code>Export OpenSSH key</code></p>
+
+<h1>Linux</h1>
+
+<p>ssh-keygen -t rsa -b 2048 -N password</p>
 
                     
         </div>
