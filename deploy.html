@@ -224,17 +224,37 @@ When you set this value to 'On' you must also set the configuration key 'Authori
 <p>If you deploy from a fake buildscript you need to make a call to <code>FakeDeployAgentHelper.authenticate</code> before you perfrom any other call to the agent.
 <code>authenticate</code> takes 4 parameters, <code>server</code>, <code>userId</code>, <code>pathToPrivateKey</code> and the <code>password</code> for the private key</p>
 
-<h1>AuthorizedKeysFile</h1>
+<h3>AuthorizedKeysFile</h3>
 
-<p>Is a rsa-pub key file where each line represents one user.
-    ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAvjdQgaEHv11/yHvSDccRM0yW7Im/fJCXyxIa/K/iNJL1erCDO5s0uQVax0vX91hSIAjoZj0jiAkZQgcud/4HTBjqJ7jojJBuC3T2li1rNzxiCclvmujGNIkE/7hOtNyfcIyb4KxCBkL2pQePwOC6Cv2xaE6XnO1D55qC4Y3ABSAPnLEayx5ajOesEldf+E/GJC+shgRtPFzSLcoRqwc3crEu/sE51+Q6tJMJkFbkto71RSzY61NQLeBXKAJCuPej9CZj3YBX5BuM3MrLNAskj8uVzb529uulTdAv4K/WxVu0aFleSCycDQYmJ3bD1eya//lE91p+8JLFCaF3tLc8Aw== Test@Fake.org</p>
+<p>Is a rsa-pub key file where each line represents one user.</p>
 
-<p>Each row has 3 values separated by space
-    <em> which type of key it is, it must be 'ssh-rsa'
-    </em> public key in base64 format (is it?)
-    * username the key maps to.</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">ssh</span><span class="o">-</span><span class="i">rsa</span> <span class="i">AAAAB3NzaC1yc2EAAAABJ_some_parts_removed_E91p</span><span class="o">+</span><span class="n">8JLFCaF3tLc8Aw</span><span class="o">==</span> <span class="i">Test</span><span class="o">@</span><span class="i">Fake</span><span class="o">.</span><span class="i">org</span></pre>
+</td>
+</tr>
+</table>
 
-<h1>How to authorize against Fake.Deploy</h1>
+<p>Each row has 3 values separated by space</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="o">*</span> <span class="i">which</span> <span class="k">type</span> <span class="k">of</span> <span class="i">key</span> <span class="i">it</span> <span class="i">is</span>, <span class="i">it</span> <span class="i">must</span> <span class="i">be</span> <span class="o">&#39;</span><span class="i">ssh</span><span class="o">-</span><span class="i">rsa&#39;</span>
+<span class="o">*</span> <span class="k">public</span> <span class="i">key</span> <span class="k">in</span> <span class="i">base64</span> <span class="i">format</span>
+<span class="o">*</span> <span class="i">username</span> <span class="i">the</span> <span class="i">key</span> <span class="i">maps</span> <span class="k">to</span><span class="o">.</span></pre>
+</td>
+</tr>
+</table>
+
+<h3>How to authorize against Fake.Deploy</h3>
 
 <p>First you must perform a HTTP-GET to:
         fake/login/yourUserId</p>
@@ -242,25 +262,28 @@ When you set this value to 'On' you must also set the configuration key 'Authori
 <p>From the response from this request, you take the body and base64 decode it, then you sign that value with your private key.
 Then you submit a HTTP-POST to
         /fake/login.
-There are 2 values you need to supply in the HTTP-POST.
-1) <code>challenge</code> which should have the same base64 encoded value you received in the body of get fake/login/userId.
-2) <code>signature</code> which should contain the signature you created using the <code>challenge</code> value and your private key.</p>
+There are 2 values you need to supply in the HTTP-POST.</p>
+
+<ol>
+<li><code>challenge</code> which should have the same base64 encoded value you received in the body of get fake/login/userId.</li>
+<li><code>signature</code> which should contain the signature you created using the <code>challenge</code> value and your private key.</li>
+</ol>
 
 <p>The body of the response from the HTTP-POST contains a guid, this guid should be passed in the header with the name <code>AuthToken</code>.
 To logout make a HTTP-GET to:
         fake/logout</p>
 
-<h1>How do I generate a key on Windows?</h1>
+<h3>How do I generate a key on Windows?</h3>
 
 <p>Get <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTYgen</a>.
 Run it.
-Make sure the key is 'SSH-2 RSA' and number of bits is (at least) 2048
+Make sure the key is 'SSH-2 RSA' and number of bits is (at least) 2048.
 Click <code>Generate</code> and follow the instructions to genereate the key.
 When the key is generated, change <code>Key comment</code> to be your username and set a passphrase.
 Then save the public key, you need to put this into Fake.Deploy's authorized keys file.
 To save the private key, click <code>Conversions</code> menu option and then click <code>Export OpenSSH key</code></p>
 
-<h1>Linux</h1>
+<h3>Linux</h3>
 
 <p>ssh-keygen -t rsa -b 2048 -N password</p>
 
