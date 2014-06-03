@@ -52,10 +52,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
+          <code onmouseout="hideTip(event, '138', 138)" onmouseover="showTip(event, '138', 138)">
             executeFSI workingDirectory script args
           </code>
-          <div class="tip" id="109">
+          <div class="tip" id="138">
             <strong>Signature:</strong>workingDirectory:string -&gt; script:string -&gt; args:seq&lt;string * string&gt; -&gt; bool * seq&lt;ConsoleMessage&gt;<br />
                       </div>
         </td>
@@ -68,10 +68,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '110', 110)" onmouseover="showTip(event, '110', 110)">
+          <code onmouseout="hideTip(event, '139', 139)" onmouseover="showTip(event, '139', 139)">
             executeFSIWithArgs (...)
           </code>
-          <div class="tip" id="110">
+          <div class="tip" id="139">
             <strong>Signature:</strong>workingDirectory:string -&gt; script:string -&gt; extraFsiArgs:string list -&gt; args:seq&lt;string * string&gt; -&gt; bool<br />
                       </div>
         </td>
@@ -84,10 +84,26 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '111', 111)" onmouseover="showTip(event, '111', 111)">
+          <code onmouseout="hideTip(event, '140', 140)" onmouseover="showTip(event, '140', 140)">
+            executeFSIWithScriptArgsAndReturnMessages (...)
+          </code>
+          <div class="tip" id="140">
+            <strong>Signature:</strong>workingDirectory:string -&gt; script:string -&gt; scriptArgs:string [] -&gt; bool * seq&lt;ConsoleMessage&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Run the given build script with fsi.exe and allows for extra arguments to the script. Returns output.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FSIHelper.fs#L66-66" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '141', 141)" onmouseover="showTip(event, '141', 141)">
             fsiPath 
           </code>
-          <div class="tip" id="111">
+          <div class="tip" id="141">
             <strong>Signature:</strong>string<br />
                       </div>
         </td>
@@ -100,10 +116,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '112', 112)" onmouseover="showTip(event, '112', 112)">
+          <code onmouseout="hideTip(event, '142', 142)" onmouseover="showTip(event, '142', 142)">
             fsiStartInfo (...)
           </code>
-          <div class="tip" id="112">
+          <div class="tip" id="142">
             <strong>Signature:</strong>script:string -&gt; workingDirectory:string -&gt; args:seq&lt;string * string&gt; -&gt; info:ProcessStartInfo -&gt; unit<br />
                       </div>
         </td>
@@ -116,33 +132,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '113', 113)" onmouseover="showTip(event, '113', 113)">
+          <code onmouseout="hideTip(event, '143', 143)" onmouseover="showTip(event, '143', 143)">
             runBuildScript (...)
           </code>
-          <div class="tip" id="113">
+          <div class="tip" id="143">
             <strong>Signature:</strong>printDetails:bool -&gt; script:string -&gt; extraFsiArgs:string list -&gt; args:seq&lt;string * string&gt; -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Run the given buildscript with fsi.exe</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FSIHelper.fs#L73-73" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FSIHelper.fs#L83-83" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '114', 114)" onmouseover="showTip(event, '114', 114)">
+          <code onmouseout="hideTip(event, '144', 144)" onmouseover="showTip(event, '144', 144)">
             runBuildScriptAt (...)
           </code>
-          <div class="tip" id="114">
+          <div class="tip" id="144">
             <strong>Signature:</strong>workingDirectory:string -&gt; printDetails:bool -&gt; script:string -&gt; extraFsiArgs:string list -&gt; args:seq&lt;string * string&gt; -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Run the given buildscript with fsi.exe at the given working directory.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FSIHelper.fs#L66-66" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FSIHelper.fs#L76-76" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
