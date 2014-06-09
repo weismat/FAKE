@@ -109,15 +109,15 @@ second stage.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
-            ParseCommandLine args
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
+            HandlerForArgs args
           </code>
-          <div class="tip" id="38">
-            <strong>Signature:</strong>args:seq&lt;string&gt; -&gt; CommandHandler option<br />
+          <div class="tip" id="32">
+            <strong>Signature:</strong>args:string list -&gt; CommandHandler<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Detects boot-specific commands.</p>
+        <p>Creates the CommandHandler from the</p>
 
             <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L406-406" class="github-link">Go to GitHub source</a>
         </td>
@@ -125,10 +125,26 @@ second stage.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '39', 39)" onmouseover="showTip(event, '39', 39)">
+          <code onmouseout="hideTip(event, '49', 49)" onmouseover="showTip(event, '49', 49)">
+            ParseCommandLine args
+          </code>
+          <div class="tip" id="49">
+            <strong>Signature:</strong>args:seq&lt;string&gt; -&gt; CommandHandler option<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Detects boot-specific commands.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L409-409" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '50', 50)" onmouseover="showTip(event, '50', 50)">
             Prepare config
           </code>
-          <div class="tip" id="39">
+          <div class="tip" id="50">
             <strong>Signature:</strong>config:Config -&gt; unit<br />
                       </div>
         </td>
@@ -136,7 +152,7 @@ second stage.</p>
         <p>The main function intended to be executed in the BOOT phase of
 boostrapping scripts.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L414-414" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L418-418" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>

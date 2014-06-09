@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>AzureHelper - FAKE - F# Make</title>
+    <title>RoundhouseHelper - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,9 +36,8 @@
 
 
 
-<h1>AzureHelper</h1>
+<h1>RoundhouseHelper</h1>
 <div class="xmldoc">
-<p>Contains tasks to control the local Azure Emulator</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -51,9 +50,9 @@
     <tbody>
         <tr>
           <td class="type-name">
-            <a href="fake-azurehelper-azureemulatorparams.html">AzureEmulatorParams</a>
+            <a href="fake-roundhousehelper-roundhouseparams.html">RoundhouseParams</a>
           </td>
-          <td class="xmldoc"><p>A type for the controlling parameter</p>
+          <td class="xmldoc"><p>Parameter type to configure the RoundhousE runner</p>
 </td>
         </tr>
     </tbody>
@@ -70,97 +69,48 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
-            AzureEmulatorDefaults 
+          <code onmouseout="hideTip(event, '364', 364)" onmouseover="showTip(event, '364', 364)">
+            Roundhouse setParams
           </code>
-          <div class="tip" id="38">
-            <strong>Signature:</strong>AzureEmulatorParams<br />
+          <div class="tip" id="364">
+            <strong>Signature:</strong>setParams:(RoundhouseParams -&gt; RoundhouseParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>The default parameter of emulator</p>
+        <p>This task to can be used to run <a href="http://projectroundhouse.org/">RoundhousE</a> for database migrations.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AzureHelper.fs#L21-21" class="github-link">Go to GitHub source</a>
+<h2>Parameters</h2>
+
+<ul>
+<li><code>setParams</code> - Function used to overwrite the Roundhouse default parameters.</li>
+</ul>
+
+<h2>Sample</h2>
+
+<pre><code>Roundhouse (fun p -&gt; { p with 
+   SqlFilesDirectory = ".\database"
+   ServerDatabase = "(local)"
+   DatabaseName = "atxc"
+   WarnOnOneTimeScriptChanges = true })
+</code></pre>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RoundhouseHelper.fs#L167-167" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '51', 51)" onmouseover="showTip(event, '51', 51)">
-            ResetDevStorage _arg1
+          <code onmouseout="hideTip(event, '365', 365)" onmouseover="showTip(event, '365', 365)">
+            RoundhouseDefaults 
           </code>
-          <div class="tip" id="51">
-            <strong>Signature:</strong>_arg1:&#39;?8248 -&gt; unit<br />
-                          <strong>Type parameters:</strong> '?8248          </div>
+          <div class="tip" id="365">
+            <strong>Signature:</strong>RoundhouseParams<br />
+                      </div>
         </td>
         <td class="xmldoc">
-        <p>Resets the devstore (BLOB, Queues and Tables)</p>
+        <p>Roundhouse default parameters - tries to locate rh.exe in any subfolder.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AzureHelper.fs#L78-78" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '52', 52)" onmouseover="showTip(event, '52', 52)">
-            StartComputeEmulator _arg1
-          </code>
-          <div class="tip" id="52">
-            <strong>Signature:</strong>_arg1:&#39;?8246 -&gt; unit<br />
-                          <strong>Type parameters:</strong> '?8246          </div>
-        </td>
-        <td class="xmldoc">
-        <p>Starts the compute emulator</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AzureHelper.fs#L67-67" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
-            StartStorageEmulator _arg1
-          </code>
-          <div class="tip" id="53">
-            <strong>Signature:</strong>_arg1:&#39;?8242 -&gt; unit<br />
-                          <strong>Type parameters:</strong> '?8242          </div>
-        </td>
-        <td class="xmldoc">
-        <p>Starts the staorage emulator</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AzureHelper.fs#L45-45" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
-            StopComputeEmulator _arg1
-          </code>
-          <div class="tip" id="54">
-            <strong>Signature:</strong>_arg1:&#39;?8244 -&gt; unit<br />
-                          <strong>Type parameters:</strong> '?8244          </div>
-        </td>
-        <td class="xmldoc">
-        <p>Stops the compute emulator</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AzureHelper.fs#L56-56" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
-            StopStorageEmulator _arg1
-          </code>
-          <div class="tip" id="55">
-            <strong>Signature:</strong>_arg1:&#39;?8240 -&gt; unit<br />
-                          <strong>Type parameters:</strong> '?8240          </div>
-        </td>
-        <td class="xmldoc">
-        <p>Stops the storage emulator</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AzureHelper.fs#L34-34" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RoundhouseHelper.fs#L117-117" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
