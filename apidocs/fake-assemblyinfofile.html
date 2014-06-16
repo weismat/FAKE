@@ -89,33 +89,33 @@ There is also a tutorial about the <a href="../assemblyinfo.html">AssemblyInfo t
         <p>Creates a C# AssemblyInfo file with the given attributes.
 The generated AssemblyInfo file contains an AssemblyVersionInformation class which can be used to retrieve the current version no. from inside of an assembly.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L168-168" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L199-199" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
             CreateCSharpAssemblyInfoWithConfig (...)
           </code>
-          <div class="tip" id="29">
-            <strong>Signature:</strong>outputFileName:string -&gt; attributes:seq&lt;Attribute&gt; -&gt; config:AssemblyInfoFileConfig -&gt; unit<br />
+          <div class="tip" id="43">
+            <strong>Signature:</strong>(outputFileName:string * attributes:seq&lt;Attribute&gt; * config:AssemblyInfoFileConfig) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates a C# AssemblyInfo file with the given attributes and configuration.
 The generated AssemblyInfo file contains an AssemblyVersionInformation class which can be used to retrieve the current version no. from inside of an assembly.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L118-118" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L122-122" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
             CreateFSharpAssemblyInfo (...)
           </code>
-          <div class="tip" id="30">
+          <div class="tip" id="44">
             <strong>Signature:</strong>outputFileName:string -&gt; attributes:seq&lt;Attribute&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -123,24 +123,58 @@ The generated AssemblyInfo file contains an AssemblyVersionInformation class whi
         <p>Creates a F# AssemblyInfo file with the given attributes.
 The generated AssemblyInfo file contains an AssemblyVersionInformation class which can be used to retrieve the current version no. from inside of an assembly.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L173-173" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L204-204" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
+          <code onmouseout="hideTip(event, '45', 45)" onmouseover="showTip(event, '45', 45)">
             CreateFSharpAssemblyInfoWithConfig (...)
           </code>
-          <div class="tip" id="31">
-            <strong>Signature:</strong>outputFileName:string -&gt; attributes:seq&lt;Attribute&gt; -&gt; config:AssemblyInfoFileConfig -&gt; unit<br />
+          <div class="tip" id="45">
+            <strong>Signature:</strong>(outputFileName:string * attributes:seq&lt;Attribute&gt; * config:AssemblyInfoFileConfig) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates a F# AssemblyInfo file with the given attributes and configuration.
 The generated AssemblyInfo file contains an AssemblyVersionInformation class which can be used to retrieve the current version no. from inside of an assembly.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L143-143" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L148-148" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '46', 46)" onmouseover="showTip(event, '46', 46)">
+            CreateVisualBasicAssemblyInfo (...)
+          </code>
+          <div class="tip" id="46">
+            <strong>Signature:</strong>outputFileName:string -&gt; attributes:seq&lt;Attribute&gt; -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Creates a VB AssemblyInfo file with the given attributes.
+The generated AssemblyInfo file contains an AssemblyVersionInformation class which can be used to retrieve the current version no. from inside of an assembly.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L209-209" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '47', 47)" onmouseover="showTip(event, '47', 47)">
+            CreateVisualBasicAssemblyInfoWithConfig (...)
+          </code>
+          <div class="tip" id="47">
+            <strong>Signature:</strong>(outputFileName:string * attributes:seq&lt;Attribute&gt; * config:AssemblyInfoFileConfig) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Creates a VB AssemblyInfo file with the given attributes and configuration.
+The generated AssemblyInfo file contains an AssemblyVersionInformation class which can be used to retrieve the current version no. from inside of an assembly.</p>
+
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoFile.fs#L173-173" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
