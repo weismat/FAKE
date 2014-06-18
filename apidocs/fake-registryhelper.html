@@ -70,81 +70,81 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '324', 324)" onmouseover="showTip(event, '324', 324)">
+          <code onmouseout="hideTip(event, '329', 329)" onmouseover="showTip(event, '329', 329)">
             createRegistrySubKey baseKey subKey
           </code>
-          <div class="tip" id="324">
+          <div class="tip" id="329">
             <strong>Signature:</strong>baseKey:RegistryBaseKey -&gt; subKey:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>create a registry subKey</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L41-41" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L55-55" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '325', 325)" onmouseover="showTip(event, '325', 325)">
+          <code onmouseout="hideTip(event, '330', 330)" onmouseover="showTip(event, '330', 330)">
             deleteRegistryValue (...)
           </code>
-          <div class="tip" id="325">
+          <div class="tip" id="330">
             <strong>Signature:</strong>baseKey:RegistryBaseKey -&gt; subKey:string -&gt; keyName:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Deletes the registry value from its key</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L49-49" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L63-63" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '326', 326)" onmouseover="showTip(event, '326', 326)">
+          <code onmouseout="hideTip(event, '331', 331)" onmouseover="showTip(event, '331', 331)">
             getRegistryKey (...)
           </code>
-          <div class="tip" id="326">
+          <div class="tip" id="331">
             <strong>Signature:</strong>baseKey:RegistryBaseKey -&gt; subKey:string -&gt; writePermission:bool -&gt; RegistryKey<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets a registy key.</p>
+        <p>Gets a registy key and falls back to 32 bit if the 64bit key is not there</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L28-28" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L39-39" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '327', 327)" onmouseover="showTip(event, '327', 327)">
+          <code onmouseout="hideTip(event, '332', 332)" onmouseover="showTip(event, '332', 332)">
             getRegistryValue baseKey subKey value
           </code>
-          <div class="tip" id="327">
+          <div class="tip" id="332">
             <strong>Signature:</strong>baseKey:RegistryBaseKey -&gt; subKey:string -&gt; value:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Gets a registy value as string</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L31-31" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L45-45" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '328', 328)" onmouseover="showTip(event, '328', 328)">
+          <code onmouseout="hideTip(event, '333', 333)" onmouseover="showTip(event, '333', 333)">
             setRegistryValue (...)
           </code>
-          <div class="tip" id="328">
+          <div class="tip" id="333">
             <strong>Signature:</strong>baseKey:RegistryBaseKey -&gt; subKey:string -&gt; keyName:string -&gt; value:&#39;T -&gt; unit<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
         <p>Sets a registry value</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L44-44" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/RegistryHelper.fs#L58-58" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
