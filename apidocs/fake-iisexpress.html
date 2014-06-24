@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
 
-    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="http://fsharp.github.io/FAKE/content/style.css" />
     <script type="text/javascript" src="http://fsharp.github.io/FAKE/content/tips.js"></script>
@@ -27,7 +27,7 @@
           <li><a href="http://fsharp.org">fsharp.org</a></li>
           <li><a href="http://github.com/fsharp/fake">github page</a></li>
         </ul>
-        <h3 class="muted">FAKE - F# Make</h3>
+        <h3 class="muted"><a href="http://fsharp.github.io/FAKE/index.html">FAKE - F# Make</a></h3>
       </div>
       <hr />
       <div class="row">
@@ -74,13 +74,16 @@
             createConfigFile (...)
           </code>
           <div class="tip" id="11">
-            <strong>Signature:</strong>(name:&#39;?6085 * siteId:int * templateFileName:string * path:string * hostName:string * port:int) -&gt; string<br />
+            <strong>Signature:</strong> (name:&#39;?6085 * siteId:int * templateFileName:string * path:string * hostName:string * port:int) -&gt; string<br />
                           <strong>Type parameters:</strong> '?6085          </div>
         </td>
         <td class="xmldoc">
-        <p>Create a IISExpress config file from a given template</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L24-24" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Create a IISExpress config file from a given template</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L24-24" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -90,11 +93,15 @@
             HostWebsite (...)
           </code>
           <div class="tip" id="12">
-            <strong>Signature:</strong>setParams:(IISExpressOptions -&gt; IISExpressOptions) -&gt; configFileName:string -&gt; siteId:int -&gt; Process<br />
+            <strong>Signature:</strong> setParams:(IISExpressOptions -&gt; IISExpressOptions) -&gt; configFileName:string -&gt; siteId:int -&gt; Process<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>This task starts the given site in IISExpress with the given ConfigFile.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L65-65" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>This task starts the given site in IISExpress with the given ConfigFile.</p>
 
 <h2>Parameters</h2>
 
@@ -109,7 +116,6 @@
 <pre><code> HostWebsite (fun p -&gt; { p with ToolPath = "iisexpress.exe" }) "configfile.config" 1
 </code></pre>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L65-65" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -119,13 +125,16 @@
             IISExpressDefaults 
           </code>
           <div class="tip" id="13">
-            <strong>Signature:</strong>IISExpressOptions<br />
+            <strong>Signature:</strong> IISExpressOptions<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>IISExpress default parameters - tries to locate the iisexpress.exe</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L14-14" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>IISExpress default parameters - tries to locate the iisexpress.exe</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L14-14" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -135,13 +144,16 @@
             OpenUrlInBrowser url
           </code>
           <div class="tip" id="14">
-            <strong>Signature:</strong>url:string -&gt; unit<br />
+            <strong>Signature:</strong> url:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Opens the given url in the browser</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L81-81" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Opens the given url in the browser</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L81-81" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -151,13 +163,16 @@
             OpenWebsiteInBrowser hostName port
           </code>
           <div class="tip" id="15">
-            <strong>Signature:</strong>hostName:string -&gt; port:int -&gt; unit<br />
+            <strong>Signature:</strong> hostName:string -&gt; port:int -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Opens the given website in the browser</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L84-84" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Opens the given website in the browser</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/Fake.IIS/IISExpress.fs#L84-84" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -165,19 +180,26 @@
 
         </div>
         <div class="span3">
-          <img src="http://fsharp.github.io/FAKE/pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+          <a href="http://fsharp.github.io/FAKE/index.html">
+            <img src="http://fsharp.github.io/FAKE/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+
             <li class="nav-header">FAKE - F# Make</li>
+
+            <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
-            <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/contributing.html">Contributing to FAKE</a></li>
+            <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
+            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
-            <li class="nav-header">Articles</li>
+            <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
@@ -194,7 +216,8 @@
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
 
-            <li class="nav-header">Documentation</li>
+            <li class="nav-header">Reference</li>
+
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
           </ul>
         </div>

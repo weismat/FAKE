@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
 
-    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="http://fsharp.github.io/FAKE/content/style.css" />
     <script type="text/javascript" src="http://fsharp.github.io/FAKE/content/tips.js"></script>
@@ -27,7 +27,7 @@
           <li><a href="http://fsharp.org">fsharp.org</a></li>
           <li><a href="http://github.com/fsharp/fake">github page</a></li>
         </ul>
-        <h3 class="muted">FAKE - F# Make</h3>
+        <h3 class="muted"><a href="http://fsharp.github.io/FAKE/index.html">FAKE - F# Make</a></h3>
       </div>
       <hr />
       <div class="row">
@@ -82,64 +82,77 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
             AssemblyInfo setParams
           </code>
-          <div class="tip" id="41">
-            <strong>Signature:</strong>setParams:(AssemblyInfoParams -&gt; AssemblyInfoParams) -&gt; unit<br />
+          <div class="tip" id="15">
+            <strong>Signature:</strong> setParams:(AssemblyInfoParams -&gt; AssemblyInfoParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Generates an AssemblyInfo file for projects
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L132-132" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Generates an AssemblyInfo file for projects
 <strong>Obsolete - Please use the new AssemblyInfoFile tasks</strong></p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L132-132" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
+          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
             AssemblyInfoDefaults 
           </code>
-          <div class="tip" id="54">
-            <strong>Signature:</strong>AssemblyInfoParams<br />
+          <div class="tip" id="16">
+            <strong>Signature:</strong> AssemblyInfoParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>AssemblyInfo default params</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L42-42" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>AssemblyInfo default params</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L42-42" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
+          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
             AssemblyInfoReplacementDefaults 
           </code>
-          <div class="tip" id="55">
-            <strong>Signature:</strong>AssemblyInfoReplacementParams<br />
+          <div class="tip" id="17">
+            <strong>Signature:</strong> AssemblyInfoReplacementParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>AssemblyInfoReplacement default params</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L213-213" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>AssemblyInfoReplacement default params</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L213-213" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
+          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
             BulkReplaceAssemblyInfoVersions (...)
           </code>
-          <div class="tip" id="56">
-            <strong>Signature:</strong>dir:string -&gt; replacementParameters:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
+          <div class="tip" id="18">
+            <strong>Signature:</strong> dir:string -&gt; replacementParameters:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Update all AssemblyInfo.[fs|cs|vb] files in the specified directory and its subdirectories</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L251-251" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Update all AssemblyInfo.[fs|cs|vb] files in the specified directory and its subdirectories</p>
 
 <h2>Parameters</h2>
 
@@ -156,38 +169,43 @@
                                                   AssemblyInformationalVersion = "1.1.1.1"})
 </code></pre>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L251-251" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
+          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
             generateFile (...)
           </code>
-          <div class="tip" id="57">
-            <strong>Signature:</strong>param:AssemblyInfoParams -&gt; attributes:Dictionary&lt;string,string&gt; -&gt; imports:seq&lt;string&gt; -&gt; writer:TextWriter -&gt; unit<br />
+          <div class="tip" id="19">
+            <strong>Signature:</strong> param:AssemblyInfoParams -&gt; attributes:Dictionary&lt;string,string&gt; -&gt; imports:seq&lt;string&gt; -&gt; writer:TextWriter -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>generates the assembly info file</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L65-65" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>generates the assembly info file</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L65-65" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '58', 58)" onmouseover="showTip(event, '58', 58)">
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
             ReplaceAssemblyInfoVersions param
           </code>
-          <div class="tip" id="58">
-            <strong>Signature:</strong>param:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
+          <div class="tip" id="20">
+            <strong>Signature:</strong> param:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L220-220" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L220-220" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
         </td>
       </tr>
     </tbody>
@@ -195,19 +213,26 @@
 
         </div>
         <div class="span3">
-          <img src="http://fsharp.github.io/FAKE/pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+          <a href="http://fsharp.github.io/FAKE/index.html">
+            <img src="http://fsharp.github.io/FAKE/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+
             <li class="nav-header">FAKE - F# Make</li>
+
+            <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
-            <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/contributing.html">Contributing to FAKE</a></li>
+            <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
+            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
-            <li class="nav-header">Articles</li>
+            <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
@@ -224,7 +249,8 @@
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
 
-            <li class="nav-header">Documentation</li>
+            <li class="nav-header">Reference</li>
+
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
           </ul>
         </div>

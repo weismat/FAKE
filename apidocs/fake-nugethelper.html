@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
 
-    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="http://fsharp.github.io/FAKE/content/style.css" />
     <script type="text/javascript" src="http://fsharp.github.io/FAKE/content/tips.js"></script>
@@ -27,7 +27,7 @@
           <li><a href="http://fsharp.org">fsharp.org</a></li>
           <li><a href="http://github.com/fsharp/fake">github page</a></li>
         </ul>
-        <h3 class="muted">FAKE - F# Make</h3>
+        <h3 class="muted"><a href="http://fsharp.github.io/FAKE/index.html">FAKE - F# Make</a></h3>
       </div>
       <hr />
       <div class="row">
@@ -108,47 +108,57 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '291', 291)" onmouseover="showTip(event, '291', 291)">
+          <code onmouseout="hideTip(event, '305', 305)" onmouseover="showTip(event, '305', 305)">
             feedUrl 
           </code>
-          <div class="tip" id="291">
-            <strong>Signature:</strong>string<br />
+          <div class="tip" id="305">
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Default NuGet feed</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L400-400" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Default NuGet feed</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L400-400" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '294', 294)" onmouseover="showTip(event, '294', 294)">
+          <code onmouseout="hideTip(event, '306', 306)" onmouseover="showTip(event, '306', 306)">
             getDependencies packagesFile
           </code>
-          <div class="tip" id="294">
-            <strong>Signature:</strong>packagesFile:string -&gt; (string * string) list<br />
+          <div class="tip" id="306">
+            <strong>Signature:</strong> packagesFile:string -&gt; (string * string) list<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>loads the dependences from specified packages.config file</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L472-472" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>loads the dependences from specified packages.config file</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L472-472" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '295', 295)" onmouseover="showTip(event, '295', 295)">
+          <code onmouseout="hideTip(event, '307', 307)" onmouseover="showTip(event, '307', 307)">
             GetMetaDataFromPackageFile (...)
           </code>
-          <div class="tip" id="295">
-            <strong>Signature:</strong>packageFileName:string -&gt; NuSpecPackage<br />
+          <div class="tip" id="307">
+            <strong>Signature:</strong> packageFileName:string -&gt; NuSpecPackage<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Returns the NuGet meta data from the given package file name.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L394-394" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns the NuGet meta data from the given package file name.</p>
 
 <h2>Parameters</h2>
 
@@ -156,21 +166,24 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>packageFileName</code> - The .nuspec package file name.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L394-394" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '296', 296)" onmouseover="showTip(event, '296', 296)">
+          <code onmouseout="hideTip(event, '308', 308)" onmouseover="showTip(event, '308', 308)">
             getNuspecProperties nuspec
           </code>
-          <div class="tip" id="296">
-            <strong>Signature:</strong>nuspec:string -&gt; NuSpecPackage<br />
+          <div class="tip" id="308">
+            <strong>Signature:</strong> nuspec:string -&gt; NuSpecPackage<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Parses nuspec metadata from a nuspec file.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L349-349" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Parses nuspec metadata from a nuspec file.</p>
 
 <h2>Parameters</h2>
 
@@ -178,37 +191,43 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspec</code> - The .nuspec file content.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L349-349" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '297', 297)" onmouseover="showTip(event, '297', 297)">
+          <code onmouseout="hideTip(event, '309', 309)" onmouseover="showTip(event, '309', 309)">
             GetPackageVersion deploymentsDir package
           </code>
-          <div class="tip" id="297">
-            <strong>Signature:</strong>deploymentsDir:string -&gt; package:string -&gt; string<br />
+          <div class="tip" id="309">
+            <strong>Signature:</strong> deploymentsDir:string -&gt; package:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets the version no. for a given package in the deployments folder</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L97-97" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the version no. for a given package in the deployments folder</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L97-97" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
+          <code onmouseout="hideTip(event, '310', 310)" onmouseover="showTip(event, '310', 310)">
             NuGet setParams nuspecFile
           </code>
-          <div class="tip" id="298">
-            <strong>Signature:</strong>setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecFile:string -&gt; unit<br />
+          <div class="tip" id="310">
+            <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecFile:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Creates a new NuGet package.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L305-305" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a new NuGet package.</p>
 
 <h2>Parameters</h2>
 
@@ -217,37 +236,43 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspecFile</code> - The .nuspec file name.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L305-305" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '299', 299)" onmouseover="showTip(event, '299', 299)">
+          <code onmouseout="hideTip(event, '311', 311)" onmouseover="showTip(event, '311', 311)">
             NuGetDefaults ()
           </code>
-          <div class="tip" id="299">
-            <strong>Signature:</strong>unit -&gt; NuGetParams<br />
+          <div class="tip" id="311">
+            <strong>Signature:</strong> unit -&gt; NuGetParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>NuGet default parameters</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L60-60" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>NuGet default parameters</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L60-60" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '300', 300)" onmouseover="showTip(event, '300', 300)">
+          <code onmouseout="hideTip(event, '312', 312)" onmouseover="showTip(event, '312', 312)">
             NuGetPack setParams nuspecFile
           </code>
-          <div class="tip" id="300">
-            <strong>Signature:</strong>setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecFile:string -&gt; unit<br />
+          <div class="tip" id="312">
+            <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecFile:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Creates a new NuGet package based on the given .nuspec file.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L284-284" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a new NuGet package based on the given .nuspec file.</p>
 
 <h2>Parameters</h2>
 
@@ -256,21 +281,24 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspecFile</code> - The .nuspec file name.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L284-284" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
+          <code onmouseout="hideTip(event, '313', 313)" onmouseover="showTip(event, '313', 313)">
             NuGetPublish setParams
           </code>
-          <div class="tip" id="301">
-            <strong>Signature:</strong>setParams:(NuGetParams -&gt; NuGetParams) -&gt; unit<br />
+          <div class="tip" id="313">
+            <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Publishes a NuGet package to the nuget server.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L294-294" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Publishes a NuGet package to the nuget server.</p>
 
 <h2>Parameters</h2>
 
@@ -278,23 +306,25 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>setParams</code> - Function used to manipulate the default NuGet parameters.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L294-294" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '302', 302)" onmouseover="showTip(event, '302', 302)">
+          <code onmouseout="hideTip(event, '314', 314)" onmouseover="showTip(event, '314', 314)">
             RequireExactly version
           </code>
-          <div class="tip" id="302">
-            <strong>Signature:</strong>version:string -&gt; string<br />
+          <div class="tip" id="314">
+            <strong>Signature:</strong> version:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Creates a string which tells NuGet that you require exactly this package version.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L91-91" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a string which tells NuGet that you require exactly this package version.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L91-91" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -302,19 +332,26 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 
         </div>
         <div class="span3">
-          <img src="http://fsharp.github.io/FAKE/pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+          <a href="http://fsharp.github.io/FAKE/index.html">
+            <img src="http://fsharp.github.io/FAKE/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+
             <li class="nav-header">FAKE - F# Make</li>
+
+            <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
-            <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/contributing.html">Contributing to FAKE</a></li>
+            <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
+            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
-            <li class="nav-header">Articles</li>
+            <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
@@ -331,7 +368,8 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
 
-            <li class="nav-header">Documentation</li>
+            <li class="nav-header">Reference</li>
+
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
           </ul>
         </div>

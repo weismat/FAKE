@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
 
-    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="http://fsharp.github.io/FAKE/content/style.css" />
     <script type="text/javascript" src="http://fsharp.github.io/FAKE/content/tips.js"></script>
@@ -27,7 +27,7 @@
           <li><a href="http://fsharp.org">fsharp.org</a></li>
           <li><a href="http://github.com/fsharp/fake">github page</a></li>
         </ul>
-        <h3 class="muted">FAKE - F# Make</h3>
+        <h3 class="muted"><a href="http://fsharp.github.io/FAKE/index.html">FAKE - F# Make</a></h3>
       </div>
       <hr />
       <div class="row">
@@ -69,15 +69,19 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '549', 549)" onmouseover="showTip(event, '549', 549)">
+          <code onmouseout="hideTip(event, '646', 646)" onmouseover="showTip(event, '646', 646)">
             GetAssemblyVersion assemblyFile
           </code>
-          <div class="tip" id="549">
-            <strong>Signature:</strong>assemblyFile:string -&gt; Version<br />
+          <div class="tip" id="646">
+            <strong>Signature:</strong> assemblyFile:string -&gt; Version<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets file assembly version.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/VersionHelper.fs#L47-47" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets file assembly version.</p>
 
 <h2>Parameters</h2>
 
@@ -85,21 +89,24 @@
 <li><code>assemblyFile</code> - The assembly file path.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/VersionHelper.fs#L47-47" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '550', 550)" onmouseover="showTip(event, '550', 550)">
+          <code onmouseout="hideTip(event, '647', 647)" onmouseover="showTip(event, '647', 647)">
             GetAssemblyVersionString assemblyFile
           </code>
-          <div class="tip" id="550">
-            <strong>Signature:</strong>assemblyFile:string -&gt; string<br />
+          <div class="tip" id="647">
+            <strong>Signature:</strong> assemblyFile:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets file assembly version in form of major.minor.build.revision.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/VersionHelper.fs#L53-53" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets file assembly version in form of major.minor.build.revision.</p>
 
 <h2>Parameters</h2>
 
@@ -107,22 +114,24 @@
 <li><code>assemblyFile</code> - The assembly file path.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/VersionHelper.fs#L53-53" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '551', 551)" onmouseover="showTip(event, '551', 551)">
+          <code onmouseout="hideTip(event, '648', 648)" onmouseover="showTip(event, '648', 648)">
             parseVersion version
           </code>
-          <div class="tip" id="551">
-            <strong>Signature:</strong>version:string -&gt; VerInfo<br />
+          <div class="tip" id="648">
+            <strong>Signature:</strong> version:string -&gt; VerInfo<br />
                       </div>
         </td>
         <td class="xmldoc">
-        
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/VersionHelper.fs#L35-35" class="github-link">Go to GitHub source</a>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/VersionHelper.fs#L35-35" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
         </td>
       </tr>
     </tbody>
@@ -130,19 +139,26 @@
 
         </div>
         <div class="span3">
-          <img src="http://fsharp.github.io/FAKE/pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+          <a href="http://fsharp.github.io/FAKE/index.html">
+            <img src="http://fsharp.github.io/FAKE/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+
             <li class="nav-header">FAKE - F# Make</li>
+
+            <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
-            <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/contributing.html">Contributing to FAKE</a></li>
+            <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
+            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
-            <li class="nav-header">Articles</li>
+            <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
@@ -159,7 +175,8 @@
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
 
-            <li class="nav-header">Documentation</li>
+            <li class="nav-header">Reference</li>
+
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
           </ul>
         </div>

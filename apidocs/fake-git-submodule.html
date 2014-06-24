@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
 
-    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="http://fsharp.github.io/FAKE/content/style.css" />
     <script type="text/javascript" src="http://fsharp.github.io/FAKE/content/tips.js"></script>
@@ -27,7 +27,7 @@
           <li><a href="http://fsharp.org">fsharp.org</a></li>
           <li><a href="http://github.com/fsharp/fake">github page</a></li>
         </ul>
-        <h3 class="muted">FAKE - F# Make</h3>
+        <h3 class="muted"><a href="http://fsharp.github.io/FAKE/index.html">FAKE - F# Make</a></h3>
       </div>
       <hr />
       <div class="row">
@@ -70,15 +70,19 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '685', 685)" onmouseover="showTip(event, '685', 685)">
+          <code onmouseout="hideTip(event, '677', 677)" onmouseover="showTip(event, '677', 677)">
             add (...)
           </code>
-          <div class="tip" id="685">
-            <strong>Signature:</strong>superRepositoryDir:string -&gt; remotePath:string -&gt; localPath:string -&gt; branch:string -&gt; unit<br />
+          <div class="tip" id="677">
+            <strong>Signature:</strong> superRepositoryDir:string -&gt; remotePath:string -&gt; localPath:string -&gt; branch:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Adds a submodule to the given super repository.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Submodule.fs#L74-74" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Adds a submodule to the given super repository.</p>
 
 <h2>Parameters</h2>
 
@@ -89,37 +93,43 @@
 <li><code>branch</code> - The branch to  clone. (can be null)</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Submodule.fs#L74-74" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '686', 686)" onmouseover="showTip(event, '686', 686)">
+          <code onmouseout="hideTip(event, '678', 678)" onmouseover="showTip(event, '678', 678)">
             getSubModules repositoryDir
           </code>
-          <div class="tip" id="686">
-            <strong>Signature:</strong>repositoryDir:string -&gt; seq&lt;Submodule&gt;<br />
+          <div class="tip" id="678">
+            <strong>Signature:</strong> repositoryDir:string -&gt; seq&lt;Submodule&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets all submodules from the given repository directory.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Submodule.fs#L37-37" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets all submodules from the given repository directory.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Submodule.fs#L37-37" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '687', 687)" onmouseover="showTip(event, '687', 687)">
+          <code onmouseout="hideTip(event, '679', 679)" onmouseover="showTip(event, '679', 679)">
             init superRepositoryDir name
           </code>
-          <div class="tip" id="687">
-            <strong>Signature:</strong>superRepositoryDir:string -&gt; name:string -&gt; unit<br />
+          <div class="tip" id="679">
+            <strong>Signature:</strong> superRepositoryDir:string -&gt; name:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Inits a submodule with the given name in a subfolder of the given super repository.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Submodule.fs#L63-63" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Inits a submodule with the given name in a subfolder of the given super repository.</p>
 
 <h2>Parameters</h2>
 
@@ -128,7 +138,6 @@
 <li><code>name</code> - The name of the new repository.</li>
 </ul>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Submodule.fs#L63-63" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -136,19 +145,26 @@
 
         </div>
         <div class="span3">
-          <img src="http://fsharp.github.io/FAKE/pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+          <a href="http://fsharp.github.io/FAKE/index.html">
+            <img src="http://fsharp.github.io/FAKE/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+
             <li class="nav-header">FAKE - F# Make</li>
+
+            <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
-            <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/contributing.html">Contributing to FAKE</a></li>
+            <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
+            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
-            <li class="nav-header">Articles</li>
+            <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
@@ -165,7 +181,8 @@
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
 
-            <li class="nav-header">Documentation</li>
+            <li class="nav-header">Reference</li>
+
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
           </ul>
         </div>

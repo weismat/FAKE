@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
 
-    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="http://fsharp.github.io/FAKE/content/style.css" />
     <script type="text/javascript" src="http://fsharp.github.io/FAKE/content/tips.js"></script>
@@ -27,7 +27,7 @@
           <li><a href="http://fsharp.org">fsharp.org</a></li>
           <li><a href="http://github.com/fsharp/fake">github page</a></li>
         </ul>
-        <h3 class="muted">FAKE - F# Make</h3>
+        <h3 class="muted"><a href="http://fsharp.github.io/FAKE/index.html">FAKE - F# Make</a></h3>
       </div>
       <hr />
       <div class="row">
@@ -52,369 +52,438 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '112', 112)" onmouseover="showTip(event, '112', 112)">
+          <code onmouseout="hideTip(event, '90', 90)" onmouseover="showTip(event, '90', 90)">
             allFilesExist files
           </code>
-          <div class="tip" id="112">
-            <strong>Signature:</strong>files:seq&lt;string&gt; -&gt; bool<br />
+          <div class="tip" id="90">
+            <strong>Signature:</strong> files:seq&lt;string&gt; -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Checks if all given files exist.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L65-65" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if all given files exist.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L65-65" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '116', 116)" onmouseover="showTip(event, '116', 116)">
-            checkFileExists fileName
-          </code>
-          <div class="tip" id="116">
-            <strong>Signature:</strong>fileName:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Raises an exception if the file doesn't exist on disk.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L61-61" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '117', 117)" onmouseover="showTip(event, '117', 117)">
-            currentDirectory 
-          </code>
-          <div class="tip" id="117">
-            <strong>Signature:</strong>string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Gets the current directory.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L52-52" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '118', 118)" onmouseover="showTip(event, '118', 118)">
-            directoryExists dir
-          </code>
-          <div class="tip" id="118">
-            <strong>Signature:</strong>dir:string -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Checks if the directory exists on disk.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L82-82" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '119', 119)" onmouseover="showTip(event, '119', 119)">
-            directoryInfo path
-          </code>
-          <div class="tip" id="119">
-            <strong>Signature:</strong>path:string -&gt; DirectoryInfo<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Creates a DirectoryInfo for the given path.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L9-9" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '120', 120)" onmouseover="showTip(event, '120', 120)">
-            DirectoryName fileName
-          </code>
-          <div class="tip" id="120">
-            <strong>Signature:</strong>fileName:string -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Gets the directory part of a filename.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L23-23" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '121', 121)" onmouseover="showTip(event, '121', 121)">
-            ensureDirectory dir
-          </code>
-          <div class="tip" id="121">
-            <strong>Signature:</strong>dir:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Checks if the given directory exists. If not then this functions creates the directory.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L89-89" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '122', 122)" onmouseover="showTip(event, '122', 122)">
-            ensureDirExists dir
-          </code>
-          <div class="tip" id="122">
-            <strong>Signature:</strong>dir:DirectoryInfo -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Ensure that directory chain exists. Create necessary directories if necessary.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L85-85" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '123', 123)" onmouseover="showTip(event, '123', 123)">
-            fileExists fileName
-          </code>
-          <div class="tip" id="123">
-            <strong>Signature:</strong>fileName:string -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Checks if the file exists on disk.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L58-58" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '124', 124)" onmouseover="showTip(event, '124', 124)">
-            fileInfo path
-          </code>
-          <div class="tip" id="124">
-            <strong>Signature:</strong>path:string -&gt; FileInfo<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Creates a FileInfo for the given path.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L12-12" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '125', 125)" onmouseover="showTip(event, '125', 125)">
-            filesInDir dir
-          </code>
-          <div class="tip" id="125">
-            <strong>Signature:</strong>dir:DirectoryInfo -&gt; FileInfo []<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Gets all files in the directory.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L29-29" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '126', 126)" onmouseover="showTip(event, '126', 126)">
-            filesInDirMatching pattern dir
-          </code>
-          <div class="tip" id="126">
-            <strong>Signature:</strong>pattern:string -&gt; dir:DirectoryInfo -&gt; FileInfo []<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Finds all the files in the directory matching the search pattern.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L32-32" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '127', 127)" onmouseover="showTip(event, '127', 127)">
-            fileSystemInfo path
-          </code>
-          <div class="tip" id="127">
-            <strong>Signature:</strong>path:string -&gt; FileSystemInfo<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Creates a FileInfo or a DirectoryInfo for the given path</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L15-15" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '128', 128)" onmouseover="showTip(event, '128', 128)">
-            FindFirstMatchingFile pattern dir
-          </code>
-          <div class="tip" id="128">
-            <strong>Signature:</strong>pattern:string -&gt; dir:string -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Gets the first file in the directory matching the search pattern or throws an error if nothing was found.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L46-46" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '129', 129)" onmouseover="showTip(event, '129', 129)">
-            fullAssemblyPath 
-          </code>
-          <div class="tip" id="129">
-            <strong>Signature:</strong>string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Get the full location of the current assembly.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L55-55" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '130', 130)" onmouseover="showTip(event, '130', 130)">
-            FullName fileName
-          </code>
-          <div class="tip" id="130">
-            <strong>Signature:</strong>fileName:string -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Converts a filename to it's full file system name.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L20-20" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '131', 131)" onmouseover="showTip(event, '131', 131)">
-            isDirectory path
-          </code>
-          <div class="tip" id="131">
-            <strong>Signature:</strong>path:string -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Detects whether the given path is a directory.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L92-92" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '132', 132)" onmouseover="showTip(event, '132', 132)">
-            isFile path
-          </code>
-          <div class="tip" id="132">
-            <strong>Signature:</strong>path:string -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Detects whether the given path is a file.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L97-97" class="github-link">Go to GitHub source</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '133', 133)" onmouseover="showTip(event, '133', 133)">
-            isInFolder dir fileInfo
-          </code>
-          <div class="tip" id="133">
-            <strong>Signature:</strong>dir:DirectoryInfo -&gt; fileInfo:FileInfo -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Checks if the file is in a subfolder of the dir.</p>
-
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L79-79" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '134', 134)" onmouseover="showTip(event, '134', 134)">
-            isSubfolderOf dir2 dir1
+            checkFileExists fileName
           </code>
           <div class="tip" id="134">
-            <strong>Signature:</strong>dir2:DirectoryInfo -&gt; dir1:DirectoryInfo -&gt; bool<br />
+            <strong>Signature:</strong> fileName:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Checks if dir1 is a subfolder of dir2. If dir1 equals dir2 the function returns also true.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L61-61" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Raises an exception if the file doesn't exist on disk.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L73-73" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '135', 135)" onmouseover="showTip(event, '135', 135)">
-            normalizeFileName fileName
+            currentDirectory 
           </code>
           <div class="tip" id="135">
-            <strong>Signature:</strong>fileName:string -&gt; string<br />
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Normalizes a filename.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L52-52" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the current directory.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L68-68" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '136', 136)" onmouseover="showTip(event, '136', 136)">
-            subDirectories dir
+            directoryExists dir
           </code>
           <div class="tip" id="136">
-            <strong>Signature:</strong>dir:DirectoryInfo -&gt; DirectoryInfo []<br />
+            <strong>Signature:</strong> dir:string -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets all subdirectories of a given directory.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L82-82" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if the directory exists on disk.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L26-26" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '137', 137)" onmouseover="showTip(event, '137', 137)">
-            TryFindFirstMatchingFile pattern dir
+            directoryInfo path
           </code>
           <div class="tip" id="137">
-            <strong>Signature:</strong>pattern:string -&gt; dir:string -&gt; string option<br />
+            <strong>Signature:</strong> path:string -&gt; DirectoryInfo<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Gets the first file in the directory matching the search pattern as an option value.</p>
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L9-9" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a DirectoryInfo for the given path.</p>
 
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L37-37" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '138', 138)" onmouseover="showTip(event, '138', 138)">
+            DirectoryName fileName
+          </code>
+          <div class="tip" id="138">
+            <strong>Signature:</strong> fileName:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L23-23" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the directory part of a filename.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '139', 139)" onmouseover="showTip(event, '139', 139)">
+            ensureDirectory dir
+          </code>
+          <div class="tip" id="139">
+            <strong>Signature:</strong> dir:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L89-89" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if the given directory exists. If not then this functions creates the directory.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '140', 140)" onmouseover="showTip(event, '140', 140)">
+            ensureDirExists dir
+          </code>
+          <div class="tip" id="140">
+            <strong>Signature:</strong> dir:DirectoryInfo -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L85-85" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Ensure that directory chain exists. Create necessary directories if necessary.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '141', 141)" onmouseover="showTip(event, '141', 141)">
+            fileExists fileName
+          </code>
+          <div class="tip" id="141">
+            <strong>Signature:</strong> fileName:string -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L58-58" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if the file exists on disk.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '142', 142)" onmouseover="showTip(event, '142', 142)">
+            fileInfo path
+          </code>
+          <div class="tip" id="142">
+            <strong>Signature:</strong> path:string -&gt; FileInfo<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L12-12" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a FileInfo for the given path.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '143', 143)" onmouseover="showTip(event, '143', 143)">
+            filesInDir dir
+          </code>
+          <div class="tip" id="143">
+            <strong>Signature:</strong> dir:DirectoryInfo -&gt; FileInfo []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L29-29" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets all files in the directory.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '144', 144)" onmouseover="showTip(event, '144', 144)">
+            filesInDirMatching pattern dir
+          </code>
+          <div class="tip" id="144">
+            <strong>Signature:</strong> pattern:string -&gt; dir:DirectoryInfo -&gt; FileInfo []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L32-32" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Finds all the files in the directory matching the search pattern.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '145', 145)" onmouseover="showTip(event, '145', 145)">
+            fileSystemInfo path
+          </code>
+          <div class="tip" id="145">
+            <strong>Signature:</strong> path:string -&gt; FileSystemInfo<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L15-15" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a FileInfo or a DirectoryInfo for the given path</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '146', 146)" onmouseover="showTip(event, '146', 146)">
+            FindFirstMatchingFile pattern dir
+          </code>
+          <div class="tip" id="146">
+            <strong>Signature:</strong> pattern:string -&gt; dir:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L46-46" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the first file in the directory matching the search pattern or throws an error if nothing was found.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '147', 147)" onmouseover="showTip(event, '147', 147)">
+            fullAssemblyPath 
+          </code>
+          <div class="tip" id="147">
+            <strong>Signature:</strong> string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L55-55" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Get the full location of the current assembly.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '148', 148)" onmouseover="showTip(event, '148', 148)">
+            FullName fileName
+          </code>
+          <div class="tip" id="148">
+            <strong>Signature:</strong> fileName:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L20-20" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Converts a filename to it's full file system name.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '149', 149)" onmouseover="showTip(event, '149', 149)">
+            isDirectory path
+          </code>
+          <div class="tip" id="149">
+            <strong>Signature:</strong> path:string -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L92-92" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Detects whether the given path is a directory.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '150', 150)" onmouseover="showTip(event, '150', 150)">
+            isFile path
+          </code>
+          <div class="tip" id="150">
+            <strong>Signature:</strong> path:string -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L97-97" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Detects whether the given path is a file.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '151', 151)" onmouseover="showTip(event, '151', 151)">
+            isInFolder dir fileInfo
+          </code>
+          <div class="tip" id="151">
+            <strong>Signature:</strong> dir:DirectoryInfo -&gt; fileInfo:FileInfo -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L79-79" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if the file is in a subfolder of the dir.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '152', 152)" onmouseover="showTip(event, '152', 152)">
+            isSubfolderOf dir2 dir1
+          </code>
+          <div class="tip" id="152">
+            <strong>Signature:</strong> dir2:DirectoryInfo -&gt; dir1:DirectoryInfo -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L73-73" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if dir1 is a subfolder of dir2. If dir1 equals dir2 the function returns also true.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '153', 153)" onmouseover="showTip(event, '153', 153)">
+            normalizeFileName fileName
+          </code>
+          <div class="tip" id="153">
+            <strong>Signature:</strong> fileName:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L68-68" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Normalizes a filename.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '154', 154)" onmouseover="showTip(event, '154', 154)">
+            subDirectories dir
+          </code>
+          <div class="tip" id="154">
+            <strong>Signature:</strong> dir:DirectoryInfo -&gt; DirectoryInfo []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L26-26" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets all subdirectories of a given directory.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '155', 155)" onmouseover="showTip(event, '155', 155)">
+            TryFindFirstMatchingFile pattern dir
+          </code>
+          <div class="tip" id="155">
+            <strong>Signature:</strong> pattern:string -&gt; dir:string -&gt; string option<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileSystemHelper.fs#L37-37" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the first file in the directory matching the search pattern as an option value.</p>
+
         </td>
       </tr>
     </tbody>
@@ -422,19 +491,26 @@
 
         </div>
         <div class="span3">
-          <img src="http://fsharp.github.io/FAKE/pics/logo.png" alt="FAKE - F# Make" style="width:150px;margin-left: 20px;" />
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+          <a href="http://fsharp.github.io/FAKE/index.html">
+            <img src="http://fsharp.github.io/FAKE/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+
             <li class="nav-header">FAKE - F# Make</li>
+
+            <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="https://nuget.org/packages/Fake">Get FAKE via NuGet</a></li>
+
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
-            <li><a href="https://github.com/fsharp/FAKE/blob/develop/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://fsharp.github.io/FAKE/contributing.html">Contributing to FAKE</a></li>
+            <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
+            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
-            <li class="nav-header">Articles</li>
+            <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
@@ -451,7 +527,8 @@
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
 
-            <li class="nav-header">Documentation</li>
+            <li class="nav-header">Reference</li>
+
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
           </ul>
         </div>
