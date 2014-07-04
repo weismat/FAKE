@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Repository - FAKE - F# Make</title>
+    <title>FscHelper - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,13 +36,43 @@
 
 
 
-<h1>Repository</h1>
+<h1>FscHelper</h1>
 <div class="xmldoc">
-<p>Contains functions which allow basic operations on git repositories.
-All operations assume that the CommandHelper can find git.exe.</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="fake-fschelper-fscparams.html">FscParams</a>
+          </td>
+          <td class="xmldoc"><p>'fsc.exe' command line parameters</p>
+</td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="fake-fschelper-fscplatform.html">FscPlatform</a>
+          </td>
+          <td class="xmldoc"><p>'fsc.exe' output platforms</p>
+</td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="fake-fschelper-fsctarget.html">FscTarget</a>
+          </td>
+          <td class="xmldoc"><p>'fsc.exe' output target types</p>
+</td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
 
   <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
@@ -53,107 +83,77 @@ All operations assume that the CommandHelper can find git.exe.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '643', 643)" onmouseover="showTip(event, '643', 643)">
-            clone workingDir repoUrl toPath
+          <code onmouseout="hideTip(event, '256', 256)" onmouseover="showTip(event, '256', 256)">
+            fsc fscParamSetter inputFiles
           </code>
-          <div class="tip" id="643">
-            <strong>Signature:</strong> workingDir:string -&gt; repoUrl:string -&gt; toPath:string -&gt; unit<br />
+          <div class="tip" id="256">
+            <strong>Signature:</strong> fscParamSetter:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; int<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Repository.fs#L15-15" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L84-84" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Clones a git repository.</p>
+          <p>Compiles the given F# source files with the specified parameters.
+Can be called as:</p>
 
-<h2>Parameters</h2>
+<p>|> fsc (fun parameters ->
+  { parameters with Output = ...
+                    FscTarget = ...
+                    ... })</p>
 
-<ul>
-<li><code>workingDir</code> - The working directory.</li>
-<li><code>repoUrl</code> - The URL to the origin.</li>
-<li><code>toPath</code> - Specifes the new target subfolder.</li>
-</ul>
+<p>Returns the exit code of the compile run.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '644', 644)" onmouseover="showTip(event, '644', 644)">
-            cloneSingleBranch (...)
+          <code onmouseout="hideTip(event, '257', 257)" onmouseover="showTip(event, '257', 257)">
+            Fsc fscParamSetter inputFiles
           </code>
-          <div class="tip" id="644">
-            <strong>Signature:</strong> workingDir:string -&gt; repoUrl:string -&gt; branchName:string -&gt; toPath:string -&gt; unit<br />
+          <div class="tip" id="257">
+            <strong>Signature:</strong> fscParamSetter:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Repository.fs#L24-24" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L119-119" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Clones a single branch of a git repository.</p>
+          <p>Compiles one or more F# source files with the specified parameters.
+Can be called as:</p>
 
-<h2>Parameters</h2>
-
-<ul>
-<li><code>workingDir</code> - The working directory.</li>
-<li><code>repoUrl</code> - The URL to the origin.</li>
-<li><code>branchname</code> - Specifes the target branch.</li>
-<li><code>toPath</code> - Specifes the new target subfolder.</li>
-</ul>
+<p>|> Fsc (fun parameters ->
+  { parameters with Output = ...
+                    FscTarget = ...
+                    ... })</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '645', 645)" onmouseover="showTip(event, '645', 645)">
-            fullclean repositoryDir
+          <code onmouseout="hideTip(event, '258', 258)" onmouseover="showTip(event, '258', 258)">
+            fscList srcFiles opts
           </code>
-          <div class="tip" id="645">
-            <strong>Signature:</strong> repositoryDir:string -&gt; unit<br />
+          <div class="tip" id="258">
+            <strong>Signature:</strong> srcFiles:string list -&gt; opts:string list -&gt; int<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Repository.fs#L46-46" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L50-50" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Cleans a directory by removing all files and sub-directories.</p>
+          <p>Compiles the given source file with the given options. If no options
+given (i.e. the second argument is an empty list), by default tries
+to behave the same way as would the command-line 'fsc.exe' tool.</p>
 
-<h2>Parameters</h2>
-
-<ul>
-<li><code>repositoryDir</code> - The path of the directory to clean.</li>
-</ul>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '646', 646)" onmouseover="showTip(event, '646', 646)">
-            init repositoryDir bare shared
-          </code>
-          <div class="tip" id="646">
-            <strong>Signature:</strong> repositoryDir:string -&gt; bare:bool -&gt; shared:bool -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Git/Repository.fs#L35-35" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Inits a git repository.</p>
-
-<h2>Parameters</h2>
-
-<ul>
-<li><code>repositoryDir</code> - The path of the target directory.</li>
-<li><code>bare</code> - If the new directory is a bare directory.</li>
-<li><code>shared</code> - Specifies that the git repository is to be shared amongst several users. This allows users belonging to the same group to push into that repository.</li>
-</ul>
+<p>Example usage:
+Target "MyFile" (fun _ ->
+  fscList ["MyFile.fs"] ["-a"; "-r"; "Common.dll"])</p>
 
         </td>
       </tr>
