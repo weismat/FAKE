@@ -38,6 +38,7 @@
 
 <h1>FscHelper</h1>
 <div class="xmldoc">
+<p>Contains tasks to compiles F# source file with the <a href="https://github.com/fsharp/FSharp.Compiler.Service">FSharp.Compiler.Service</a>.</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -59,14 +60,14 @@
           <td class="type-name">
             <a href="fake-fschelper-fscplatform.html">FscPlatform</a>
           </td>
-          <td class="xmldoc"><p>'fsc.exe' output platforms</p>
+          <td class="xmldoc"><p>The 'fsc.exe' output platforms</p>
 </td>
         </tr>
         <tr>
           <td class="type-name">
             <a href="fake-fschelper-fsctarget.html">FscTarget</a>
           </td>
-          <td class="xmldoc"><p>'fsc.exe' output target types</p>
+          <td class="xmldoc"><p>The 'fsc.exe' output target types</p>
 </td>
         </tr>
     </tbody>
@@ -83,77 +84,70 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
-            fsc fscParamSetter inputFiles
+          <code onmouseout="hideTip(event, '256', 256)" onmouseover="showTip(event, '256', 256)">
+            fsc setParams inputFiles
           </code>
-          <div class="tip" id="175">
-            <strong>Signature:</strong> fscParamSetter:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; int<br />
+          <div class="tip" id="256">
+            <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; int<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L84-84" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L86-86" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Compiles the given F# source files with the specified parameters.
-Can be called as:</p>
+          <p>Compiles the given F# source files with the specified parameters and returns the exit code of the compile run.</p>
 
-<p>|> fsc (fun parameters ->
-  { parameters with Output = ...
-                    FscTarget = ...
-                    ... })</p>
+<h2>Parameters</h2>
 
-<p>Returns the exit code of the compile run.</p>
+<ul>
+<li><code>setParams</code> - Function used to overwrite the default Fsc parameters.</li>
+<li><code>inputFiles</code> - The F# input files.</li>
+</ul>
+
+<h2>Sample</h2>
+
+<pre><code>["file1.fs"; "file2.fs"]
+|&gt; fsc (fun parameters -&gt;
+         { parameters with Output = ...
+                           FscTarget = ...
+                           ... })
+</code></pre>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '219', 219)" onmouseover="showTip(event, '219', 219)">
-            Fsc fscParamSetter inputFiles
+          <code onmouseout="hideTip(event, '257', 257)" onmouseover="showTip(event, '257', 257)">
+            Fsc setParams inputFiles
           </code>
-          <div class="tip" id="219">
-            <strong>Signature:</strong> fscParamSetter:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; unit<br />
+          <div class="tip" id="257">
+            <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L119-119" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L126-126" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Compiles one or more F# source files with the specified parameters.
-Can be called as:</p>
+          <p>Compiles one or more F# source files with the specified parameters.</p>
 
-<p>|> Fsc (fun parameters ->
-  { parameters with Output = ...
-                    FscTarget = ...
-                    ... })</p>
+<h2>Parameters</h2>
 
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+<ul>
+<li><code>setParams</code> - Function used to overwrite the default Fsc parameters.</li>
+<li><code>inputFiles</code> - The F# input files.</li>
+</ul>
 
-          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
-            fscList srcFiles opts
-          </code>
-          <div class="tip" id="220">
-            <strong>Signature:</strong> srcFiles:string list -&gt; opts:string list -&gt; int<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L50-50" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Compiles the given source file with the given options. If no options
-given (i.e. the second argument is an empty list), by default tries
-to behave the same way as would the command-line 'fsc.exe' tool.</p>
+<h2>Sample</h2>
 
-<p>Example usage:
-Target "MyFile" (fun _ ->
-  fscList ["MyFile.fs"] ["-a"; "-r"; "Common.dll"])</p>
+<pre><code>["file1.fs"; "file2.fs"]
+|&gt; Fsc (fun parameters -&gt;
+              { parameters with Output = ...
+                                FscTarget = ...
+                                ... })
+</code></pre>
 
         </td>
       </tr>
