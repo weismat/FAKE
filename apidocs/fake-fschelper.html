@@ -84,19 +84,19 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '256', 256)" onmouseover="showTip(event, '256', 256)">
+          <code onmouseout="hideTip(event, '255', 255)" onmouseover="showTip(event, '255', 255)">
             fsc setParams inputFiles
           </code>
-          <div class="tip" id="256">
+          <div class="tip" id="255">
             <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; int<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L86-86" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L91-91" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Compiles the given F# source files with the specified parameters and returns the exit code of the compile run.</p>
+          <p>Compiles the given F# source files with the specified parameters.</p>
 
 <h2>Parameters</h2>
 
@@ -104,6 +104,10 @@
 <li><code>setParams</code> - Function used to overwrite the default Fsc parameters.</li>
 <li><code>inputFiles</code> - The F# input files.</li>
 </ul>
+
+<h2>Returns</h2>
+
+<p>The exit status code of the compile.</p>
 
 <h2>Sample</h2>
 
@@ -119,15 +123,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '257', 257)" onmouseover="showTip(event, '257', 257)">
+          <code onmouseout="hideTip(event, '256', 256)" onmouseover="showTip(event, '256', 256)">
             Fsc setParams inputFiles
           </code>
-          <div class="tip" id="257">
+          <div class="tip" id="256">
             <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L126-126" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L131-131" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -184,6 +188,7 @@
             <li><a href="http://fsharp.github.io/FAKE/create-nuget-package.html">Create NuGet packages</a></li>
             <li><a href="http://fsharp.github.io/FAKE/specifictargets.html">Running specific targets</a></li>
             <li><a href="http://fsharp.github.io/FAKE/commandline.html">Running FAKE from command line</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compile from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
