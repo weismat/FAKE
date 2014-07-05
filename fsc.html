@@ -40,15 +40,13 @@
           <h1>Compiling F# Sources</h1>
 
 <p>FAKE can be used to build F# source files and output libraries, modules,
-and executables. It does this by making use of the
-<code>FSharp.Compiler.Service</code> library that it comes with, and making
-available three FAKE tasks for compiling in different ways and with
-different return values. In this tutorial we will look at each compile
-task.</p>
+and executables by using the bundeld
+<a href="https://github.com/fsharp/FSharp.Compiler.Service">FSharp.Compiler.Service</a>. 
+In this tutorial we will look at these compile tasks.</p>
 
-<h2><code>Fsc</code></h2>
+<h2>The <code>Fsc</code> task</h2>
 
-<p>The first task can be used in standard FAKE targets:</p>
+<p>The <code>Fsc</code> task can be used in standard FAKE targets:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -77,6 +75,8 @@ task.</p>
 <span class="l">24: </span>
 <span class="l">25: </span>
 <span class="l">26: </span>
+<span class="l">27: </span>
+<span class="l">28: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
@@ -85,22 +85,24 @@ task.</p>
 <span class="k">open</span> <span class="i">Fake</span><span class="o">.</span><span class="i">FscHelper</span>
 
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-  [<span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">fs</span><span class="s">&quot;</span>]
-  <span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
-    { <span class="i">parameters</span> <span class="k">with</span> <span class="i">Output</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
-                      <span class="i">FscTarget</span> <span class="o">=</span> <span class="i">Library</span> }))
+  <span class="o">!!</span> <span class="s">&quot;</span><span class="s">src</span><span class="s">/</span><span class="s">*</span><span class="s">*</span><span class="s">/</span><span class="s">*</span><span class="s">.</span><span class="s">fs</span><span class="s">&quot;</span>
+  <span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span>
+           { <span class="i">p</span> <span class="k">with</span> <span class="i">Output</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+                    <span class="i">FscTarget</span> <span class="o">=</span> <span class="i">Library</span> })
+)
 
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Otherthing</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
-  [<span class="s">&quot;</span><span class="s">Otherthing</span><span class="s">.</span><span class="s">fs</span><span class="s">&quot;</span>]
-  <span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
-    { <span class="i">parameters</span> <span class="k">with</span> <span class="i">FscTarget</span> <span class="o">=</span> <span class="i">Library</span> }))
+  [<span class="s">&quot;</span><span class="s">Otherthing</span><span class="s">.</span><span class="s">fs</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">Otherthing2</span><span class="s">.</span><span class="s">fs</span><span class="s">&quot;</span>]
+  <span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span> { <span class="i">p</span> <span class="k">with</span> <span class="i">FscTarget</span> <span class="o">=</span> <span class="i">Library</span> })
+)
 
 <span class="i">Target</span> <span class="s">&quot;</span><span class="s">Main</span><span class="s">.</span><span class="s">exe</span><span class="s">&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
   [<span class="s">&quot;</span><span class="s">Main</span><span class="s">.</span><span class="s">fs</span><span class="s">&quot;</span>]
-  <span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
-    { <span class="i">parameters</span> <span class="k">with</span> <span class="i">References</span> <span class="o">=</span>
-                        [ <span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
-                          <span class="s">&quot;</span><span class="s">Otherthing</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span> ] }))
+  <span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span>
+           { <span class="i">p</span> <span class="k">with</span> <span class="i">References</span> <span class="o">=</span>
+                      [ <span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
+                        <span class="s">&quot;</span><span class="s">Otherthing</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span> ] })
+)
 
 <span class="s">&quot;</span><span class="s">Something</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
   <span class="o">==&gt;</span> <span class="s">&quot;</span><span class="s">Otherthing</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
@@ -110,10 +112,11 @@ task.</p>
 </tr>
 </table>
 
-<p>The <code>Fsc</code> task takes two arguments: (1) a function which overrides the
-default compile parameters, and (2) a list of source files. We start
-with the list of source files, and send it into the <code>Fsc</code> task using the
-<code>|&gt;</code> ('pipe') operator. We put the override function last. The override
+<p>The <code>Fsc</code> task takes two arguments: 
+  1. a function which overrides the default compile parameters, and 
+  2. a list of source files.
+We start with the list of source files, and send it into the <code>Fsc</code> task using F#'s
+<code>|&gt;</code> operator. We put the override function last. The override
 function takes the default compile parameters and needs to return the
 parameters with any, all, or no parameters overridden.</p>
 
@@ -225,7 +228,7 @@ to split the string on whitespace, and pass the resulting list into
               <li><a href="create-nuget-package.html">Create NuGet packages</a></li>
               <li><a href="specifictargets.html">Running specific targets</a></li>
               <li><a href="commandline.html">Running FAKE from command line</a></li>
-              <li><a href="fsc.html">Using the F# compile from FAKE</a></li>
+              <li><a href="fsc.html">Using the F# compiler from FAKE</a></li>
               <li><a href="customtasks.html">Creating custom tasks</a></li>
               <li><a href="teamcity.html">TeamCity integration</a></li>
               <li><a href="canopy.html">Running canopy tests</a></li>
