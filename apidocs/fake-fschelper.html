@@ -38,7 +38,8 @@
 
 <h1>FscHelper</h1>
 <div class="xmldoc">
-<p>Contains tasks to compiles F# source file with the <a href="https://github.com/fsharp/FSharp.Compiler.Service">FSharp.Compiler.Service</a>.</p>
+<p>Contains tasks to compiles F# source file with the <a href="https://github.com/fsharp/FSharp.Compiler.Service">FSharp.Compiler.Service</a>.
+There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> available.</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -84,10 +85,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
+          <code onmouseout="hideTip(event, '264', 264)" onmouseover="showTip(event, '264', 264)">
             fsc setParams inputFiles
           </code>
-          <div class="tip" id="222">
+          <div class="tip" id="264">
             <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; int<br />
                       </div>
         </td>
@@ -107,7 +108,7 @@
 
 <h2>Returns</h2>
 
-<p>The exit status code of the compile.</p>
+<p>The exit status code of the compile process.</p>
 
 <h2>Sample</h2>
 
@@ -123,10 +124,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '223', 223)" onmouseover="showTip(event, '223', 223)">
+          <code onmouseout="hideTip(event, '265', 265)" onmouseover="showTip(event, '265', 265)">
             Fsc setParams inputFiles
           </code>
-          <div class="tip" id="223">
+          <div class="tip" id="265">
             <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; unit<br />
                       </div>
         </td>
@@ -155,6 +156,27 @@
 
         </td>
       </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '266', 266)" onmouseover="showTip(event, '266', 266)">
+            fscList srcFiles opts
+          </code>
+          <div class="tip" id="266">
+            <strong>Signature:</strong> srcFiles:string list -&gt; opts:string list -&gt; int<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FscHelper.fs#L49-49" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Compiles the given source file with the given options. If no options
+given (i.e. the second argument is an empty list), by default tries
+to behave the same way as would the command-line 'fsc.exe' tool.</p>
+
+        </td>
+      </tr>
     </tbody>
   </table>
 
@@ -172,11 +194,11 @@
             <li><a href="http://fsharp.github.io/FAKE/index.html">Home page</a></li>
             <li class="divider"></li>
 
-            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make package via NuGet</a></li>
+            <li><a href="https://www.nuget.org/packages/FAKE">Get FAKE - F# Make via NuGet</a></li>
             <li><a href="http://github.com/fsharp/fake">Source Code on GitHub</a></li>
             <li><a href="http://github.com/fsharp/fake/blob/master/License.txt">License (MS-PL)</a></li>
-            <li><a href="http://github.com/fsharp/fake/RELEASE_NOTES.html">Release Notes</a></li>
-            <li><a href="http://github.com/fsharp/fake/contributing.html">Contributing to FAKE - F# Make</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/RELEASE_NOTES.html">Release Notes</a></li>
+            <li><a href="http://fsharp.github.io/FAKE//contributing.html">Contributing to FAKE - F# Make</a></li>
             <li><a href="http://fsharp.github.io/FAKE/users.html">Who is using FAKE?</a></li>                        
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
