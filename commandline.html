@@ -147,14 +147,14 @@
 
 <p>If you are on windows then create this small redirect script:</p>
 
-<pre lang="batchfile">@echo off
+<table class="pre"><tr><td><pre lang="batchfile">@echo off
 &quot;tools\Fake.exe&quot; &quot;%1&quot;
-exit /b %errorlevel%</pre>
+exit /b %errorlevel%</pre></td></tr></table>
 
 <p>On mono you can use:</p>
 
-<pre lang="batchfile">#!/bin/bash
-mono ./tools/FAKE.exe &quot;$@&quot;</pre>
+<table class="pre"><tr><td><pre lang="batchfile">#!/bin/bash
+mono ./tools/FAKE.exe &quot;$@&quot;</pre></td></tr></table>
 
 <p>Now you can run FAKE targets easily from the command line:</p>
 

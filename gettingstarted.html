@@ -83,11 +83,11 @@
 
 <p>In the root of the project you will find a build.bat file:</p>
 
-<pre lang="batchfile">@echo off
+<table class="pre"><tr><td><pre lang="batchfile">@echo off
 cls
 &quot;.nuget\NuGet.exe&quot; &quot;Install&quot; &quot;FAKE&quot; &quot;-OutputDirectory&quot; &quot;packages&quot; &quot;-ExcludeVersion&quot;
 &quot;packages\FAKE\tools\Fake.exe&quot; build.fsx
-pause</pre>
+pause</pre></td></tr></table>
 
 <p>If you run this batch file from the command line then the latest FAKE version will be <a href="http://nuget.org/packages/FAKE/">downloaded via nuget</a> and your first FAKE script (build.fsx) will be executed. If everything works fine you will get the following output:</p>
 
