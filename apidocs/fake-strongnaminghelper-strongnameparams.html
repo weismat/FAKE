@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>XUnitHelper - FAKE - F# Make</title>
+    <title>StrongNameParams - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,118 +36,71 @@
 
 
 
-<h1>XUnitHelper</h1>
+<h1>StrongNameParams</h1>
 <div class="xmldoc">
-<p>Contains tasks to run <a href="http://xunit.codeplex.com/">xUnit</a> unit tests.</p>
+<p>Strong naming parameters</p>
 </div>
-
-<!-- Render nested types and modules, if there are any -->
-  <h2>Nested types and modules</h2>
-  <div>
-      <table class="table table-bordered type-list">
-    <thead>
-      <tr><td>Type</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="fake-xunithelper-xuniterrorlevel.html">XUnitErrorLevel</a>
-          </td>
-          <td class="xmldoc"><p>Option which allows to specify if an xUnit error should break the build.</p>
-</td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="fake-xunithelper-xunitparams.html">XUnitParams</a>
-          </td>
-          <td class="xmldoc"><p>The xUnit parameter type</p>
-</td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-  <h3>Functions and values</h3>
+  <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Function or value</td><td>Description</td></tr>
+      <tr><td>Record Field</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '594', 594)" onmouseover="showTip(event, '594', 594)">
-            emptyTrait 
+          <code onmouseout="hideTip(event, '1431', 1431)" onmouseover="showTip(event, '1431', 1431)">
+            TimeOut
           </code>
-          <div class="tip" id="594">
-            <strong>Signature:</strong> (string * string) option<br />
+          <div class="tip" id="1431">
+            <strong>Signature:</strong> TimeSpan<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L42-42" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L12-12" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>The xUnit default parameters</p>
+          <p>The timeout for the Strong naming process.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '595', 595)" onmouseover="showTip(event, '595', 595)">
-            xUnit setParams assemblies
+          <code onmouseout="hideTip(event, '1432', 1432)" onmouseover="showTip(event, '1432', 1432)">
+            ToolPath
           </code>
-          <div class="tip" id="595">
-            <strong>Signature:</strong> setParams:(XUnitParams -&gt; XUnitParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
+          <div class="tip" id="1432">
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L105-105" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L10-10" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Runs xUnit unit tests in the given assemblies via the given xUnit runner.
-Will fail if the runner terminates with non-zero exit code for any of the assemblies.
-Offending assemblies will be listed in the error message.</p>
-
-<p>The xUnit runner terminates with a non-zero exit code if any of the tests
-in the given assembly fail.</p>
-
-<h2>Parameters</h2>
-
-<ul>
-<li><code>setParams</code> - Function used to manipulate the default XUnitParams value.</li>
-<li><code>assemblies</code> - Sequence of one or more assemblies containing xUnit unit tests.</li>
-</ul>
-
-<h2>Sample usage</h2>
-
-<pre><code>Target "Test" (fun _ -&gt;
-    !! (testDir + @"\xUnit.Test.*.dll") 
-      |&gt; xUnit (fun p -&gt; {p with OutputDir = testDir })
-)
-</code></pre>
+          <p>(Required) Path to the sn.exe</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '596', 596)" onmouseover="showTip(event, '596', 596)">
-            XUnitDefaults 
+          <code onmouseout="hideTip(event, '1433', 1433)" onmouseover="showTip(event, '1433', 1433)">
+            WorkingDir
           </code>
-          <div class="tip" id="596">
-            <strong>Signature:</strong> XUnitParams<br />
+          <div class="tip" id="1433">
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L44-44" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L14-14" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>The directory where the Strong naming process will be started.</p>
+
         </td>
       </tr>
     </tbody>

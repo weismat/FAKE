@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>XUnitHelper - FAKE - F# Make</title>
+    <title>StrongNamingHelper - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,9 +36,9 @@
 
 
 
-<h1>XUnitHelper</h1>
+<h1>StrongNamingHelper</h1>
 <div class="xmldoc">
-<p>Contains tasks to run <a href="http://xunit.codeplex.com/">xUnit</a> unit tests.</p>
+<p>This module contains helper function for Microsoft's sn.exe</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -51,16 +51,9 @@
     <tbody>
         <tr>
           <td class="type-name">
-            <a href="fake-xunithelper-xuniterrorlevel.html">XUnitErrorLevel</a>
+            <a href="fake-strongnaminghelper-strongnameparams.html">StrongNameParams</a>
           </td>
-          <td class="xmldoc"><p>Option which allows to specify if an xUnit error should break the build.</p>
-</td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="fake-xunithelper-xunitparams.html">XUnitParams</a>
-          </td>
-          <td class="xmldoc"><p>The xUnit parameter type</p>
+          <td class="xmldoc"><p>Strong naming parameters</p>
 </td>
         </tr>
     </tbody>
@@ -77,77 +70,82 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '594', 594)" onmouseover="showTip(event, '594', 594)">
-            emptyTrait 
+          <code onmouseout="hideTip(event, '551', 551)" onmouseover="showTip(event, '551', 551)">
+            SN32 
           </code>
-          <div class="tip" id="594">
-            <strong>Signature:</strong> (string * string) option<br />
+          <div class="tip" id="551">
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L42-42" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>The xUnit default parameters</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '595', 595)" onmouseover="showTip(event, '595', 595)">
-            xUnit setParams assemblies
-          </code>
-          <div class="tip" id="595">
-            <strong>Signature:</strong> setParams:(XUnitParams -&gt; XUnitParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L105-105" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Runs xUnit unit tests in the given assemblies via the given xUnit runner.
-Will fail if the runner terminates with non-zero exit code for any of the assemblies.
-Offending assemblies will be listed in the error message.</p>
-
-<p>The xUnit runner terminates with a non-zero exit code if any of the tests
-in the given assembly fail.</p>
-
-<h2>Parameters</h2>
-
-<ul>
-<li><code>setParams</code> - Function used to manipulate the default XUnitParams value.</li>
-<li><code>assemblies</code> - Sequence of one or more assemblies containing xUnit unit tests.</li>
-</ul>
-
-<h2>Sample usage</h2>
-
-<pre><code>Target "Test" (fun _ -&gt;
-    !! (testDir + @"\xUnit.Test.*.dll") 
-      |&gt; xUnit (fun p -&gt; {p with OutputDir = testDir })
-)
-</code></pre>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '596', 596)" onmouseover="showTip(event, '596', 596)">
-            XUnitDefaults 
-          </code>
-          <div class="tip" id="596">
-            <strong>Signature:</strong> XUnitParams<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L44-44" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L16-16" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '552', 552)" onmouseover="showTip(event, '552', 552)">
+            SN64 
+          </code>
+          <div class="tip" id="552">
+            <strong>Signature:</strong> string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L17-17" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '553', 553)" onmouseover="showTip(event, '553', 553)">
+            StrongName setParams assemblies
+          </code>
+          <div class="tip" id="553">
+            <strong>Signature:</strong> setParams:(StrongNameParams -&gt; StrongNameParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L39-39" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Runs sn.exe on a group of assemblies.</p>
+
+<h2>Parameters</h2>
+
+<ul>
+<li><code>setParams</code> - Function used to overwrite the default SN parameters.</li>
+<li><code>assemblies</code> - The assemblies.</li>
+</ul>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '554', 554)" onmouseover="showTip(event, '554', 554)">
+            StrongNameDefaults 
+          </code>
+          <div class="tip" id="554">
+            <strong>Signature:</strong> StrongNameParams<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/StrongNamingHelper.fs#L20-20" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Strong naming default parameters</p>
+
         </td>
       </tr>
     </tbody>
