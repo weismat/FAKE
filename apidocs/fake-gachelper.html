@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>REST - FAKE - F# Make</title>
+    <title>GACHelper - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,9 +36,9 @@
 
 
 
-<h1>REST</h1>
+<h1>GACHelper</h1>
 <div class="xmldoc">
-<p>Contains functions to execute typical HTTP/REST calls.</p>
+<p>This module contains helper function for the GAC</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -51,9 +51,9 @@
     <tbody>
         <tr>
           <td class="type-name">
-            <a href="fake-rest-postmethod.html">PostMethod</a>
+            <a href="fake-gachelper-gacparams.html">GACParams</a>
           </td>
-          <td class="xmldoc"><p>Option type for the HTTP verb</p>
+          <td class="xmldoc"><p>GAC parameters</p>
 </td>
         </tr>
     </tbody>
@@ -70,89 +70,57 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '305', 305)" onmouseover="showTip(event, '305', 305)">
-            ExecuteGetCommand userName password url
+          <code onmouseout="hideTip(event, '252', 252)" onmouseover="showTip(event, '252', 252)">
+            GAC setParams command
           </code>
-          <div class="tip" id="305">
-            <strong>Signature:</strong> userName:string -&gt; password:string -&gt; url:string -&gt; string<br />
+          <div class="tip" id="252">
+            <strong>Signature:</strong> setParams:(GACParams -&gt; GACParams) -&gt; command:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/REST.fs#L23-23" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/GACHelper.fs#L24-24" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Executes an HTTP GET command and retrives the information.
-It returns the response of the request, or null if we got 404 or nothing.</p>
-
-<h2>Parameters</h2>
-
-<ul>
-<li><code>userName</code> - The username to use with the request.</li>
-<li><code>password</code> - The password to use with the request.</li>
-<li><code>url</code> - The URL to perform the GET operation.</li>
-</ul>
+          <p>Runs gacutil with the given command.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '329', 329)" onmouseover="showTip(event, '329', 329)">
-            ExecutePost url userName password data
+          <code onmouseout="hideTip(event, '262', 262)" onmouseover="showTip(event, '262', 262)">
+            GACDefaults 
           </code>
-          <div class="tip" id="329">
-            <strong>Signature:</strong> url:string -&gt; userName:string -&gt; password:string -&gt; data:string -&gt; string<br />
+          <div class="tip" id="262">
+            <strong>Signature:</strong> GACParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/REST.fs#L69-69" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/GACHelper.fs#L18-18" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Executes an HTTP POST command and retrives the information.
-It returns the response of the request, or null if we got 404 or nothing.</p>
-
-<h2>Parameters</h2>
-
-<ul>
-<li><code>url</code> - The URL to perform the POST operation.</li>
-<li><code>userName</code> - The username to use with the request.</li>
-<li><code>password</code> - The password to use with the request.</li>
-<li><code>data</code> - The data to post.</li>
-</ul>
+          <p>GACutil default parameters</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '330', 330)" onmouseover="showTip(event, '330', 330)">
-            ExecutePostCommand (...)
+          <code onmouseout="hideTip(event, '263', 263)" onmouseover="showTip(event, '263', 263)">
+            GACUtil 
           </code>
-          <div class="tip" id="330">
-            <strong>Signature:</strong> headerF:(WebHeaderCollection -&gt; unit) -&gt; url:string -&gt; userName:string -&gt; password:string -&gt; data:string -&gt; string<br />
+          <div class="tip" id="263">
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/REST.fs#L44-44" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/GACHelper.fs#L15-15" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Executes an HTTP POST command and retrives the information.  <br />
-This function will automatically include a "source" parameter if the "Source" property is set.
-It returns the response of the request, or null if we got 404 or nothing.</p>
-
-<h2>Parameters</h2>
-
-<ul>
-<li><code>headerF</code> - A function which allows to manipulate the HTTP headers.</li>
-<li><code>url</code> - The URL to perform the POST operation.</li>
-<li><code>userName</code> - The username to use with the request.</li>
-<li><code>password</code> - The password to use with the request.</li>
-<li><code>data</code> - The data to post.</li>
-</ul>
-
+          
         </td>
       </tr>
     </tbody>
