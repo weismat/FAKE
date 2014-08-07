@@ -50,12 +50,12 @@ In this tutorial we are looking at the TypeScript support.</p>
 }
 
 <span class="k">function</span> greeter(person : Person) {
-    <span class="k">return</span> <span class="s">"Hello, "</span> + person.firstname + <span class="s">" "</span> + person.lastname;
+    <span class="k">return</span> <span class="s">"Hello, "</span> <span class="o">+</span> person.firstname <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> person.lastname;
 }
 
-<span class="k">var</span> user = {firstname: <span class="s">"Jane"</span>, lastname: <span class="s">"User"</span>};
+<span class="k">var</span> user <span class="o">=</span> {firstname: <span class="s">"Jane"</span>, lastname: <span class="s">"User"</span>};
 
-document.body.innerHTML = greeter(user);</pre></td></tr></table>
+document.body.innerHTML <span class="o">=</span> greeter(user);</pre></td></tr></table>
 
 <p>Now create a build.fsx and run it via FAKE.exe:</p>
 
@@ -96,12 +96,12 @@ document.body.innerHTML = greeter(user);</pre></td></tr></table>
 <p>This small script will run all *.ts files through the TypeScript compiler and put them into the ./out/ folder. In this case we will find a greetings.js:</p>
 
 <table class="pre"><tr><td><pre lang="javascript"><span class="k">function</span> greeter(person) {
-    <span class="k">return</span> <span class="s">"Hello, "</span> + person.firstname + <span class="s">" "</span> + person.lastname;
+    <span class="k">return</span> <span class="s">"Hello, "</span> <span class="o">+</span> person.firstname <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> person.lastname;
 }
 
-<span class="k">var</span> user = { firstname: <span class="s">"Jane"</span>, lastname: <span class="s">"User"</span> };
+<span class="k">var</span> user <span class="o">=</span> { firstname: <span class="s">"Jane"</span>, lastname: <span class="s">"User"</span> };
 
-document.body.innerHTML = greeter(user);</pre></td></tr></table>
+document.body.innerHTML <span class="o">=</span> greeter(user);</pre></td></tr></table>
 
 <p>If you need more details please see the <a href="apidocs/fake-typescript.html">API docs for the TypeScript</a> task.</p>
 
